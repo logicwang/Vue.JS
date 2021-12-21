@@ -9,11 +9,13 @@
     </div>
     {{ message }}
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <v-demo></v-demo>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+import Demo from './components/Demo.vue';
 
 export default {
   name: 'App',
@@ -30,6 +32,7 @@ export default {
     }
   },
   components: {
+    'v-demo': Demo,
     // HelloWorld
   }
 }

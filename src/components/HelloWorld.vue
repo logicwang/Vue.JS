@@ -37,17 +37,6 @@ export default {
     msg: String
   }
 }
-
-    new Vue({
-      template: '<div>{{ hi }}</div>'
-    })
-
-    // 不需要编译器
-    new Vue({
-      render (h) {
-        return h('div', this.hi)
-      }
-    })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
