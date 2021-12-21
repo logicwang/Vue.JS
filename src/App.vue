@@ -52,9 +52,9 @@ export default {
   top: 0;
   bottom: 0;
   display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .box {
   background-color: #fff;
