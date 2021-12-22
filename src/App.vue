@@ -15,7 +15,7 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Demo from './components/Demo.vue';
+import Demo from './components/data.vue';
 
 export default {
   name: 'App',
