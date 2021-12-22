@@ -21,6 +21,5 @@ export default {
             return this.message.split('').reverse().join('')
         }
     }
-
 }
 </script>
