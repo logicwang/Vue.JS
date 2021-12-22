@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      message: 'XXX',
+      message: 'x',
       seen: false
     }
   },
