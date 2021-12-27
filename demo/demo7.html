@@ -9,10 +9,26 @@
 </head>
 
 <body>
-    <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+    <div id="app">
+        <div v-bind:class="{ active: isActive }"
+            style="width: 200px;height: 200px;text-align: center;line-height: 200px;">
+            ... vue
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
-        
+        var vm = new Vue({
+            e1: "#app",
+            data: {
+                isActive: true
+            }
+        })
     </script>
+    <style>
+        .active {
+            background: #FF0000;
+        }
+    </style>
 </body>
 
 </html>
