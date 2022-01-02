@@ -11,6 +11,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <v-demo></v-demo>
     <v-demo2></v-demo2>
+    <v-demo3></v-demo3>
   </div>
 </template>
 
@@ -18,6 +19,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Demo from './components/data.vue';
 import Demo2 from './components/demo2.vue';
+import Demo3 from './components/demo3.vue';
 
 export default {
   name: 'App',
@@ -36,6 +38,7 @@ export default {
   components: {
     'v-demo': Demo,
     'v-demo2': Demo2,
+    'v-demo3': Demo3,
     // HelloWorld
   }
 }
