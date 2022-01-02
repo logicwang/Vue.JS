@@ -10,12 +10,14 @@
     {{ message }}
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <v-demo></v-demo>
+    <v-demo2></v-demo2>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import Demo from './components/data.vue';
+import Demo2 from './components/demo2.vue';
 
 export default {
   name: 'App',
@@ -33,6 +35,7 @@ export default {
   },
   components: {
     'v-demo': Demo,
+    'v-demo2': Demo2,
     // HelloWorld
   }
 }
