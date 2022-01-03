@@ -6,7 +6,7 @@
         </div>
 
 
-        <div :style="{color: color,fontSize:size}">
+        <div :style="{color: color,fontSize:size,background: background}">
             Vue
         </div>
 
@@ -20,10 +20,8 @@ export default {
     data:()=> ({
         isActive : true,
         isGreen : true ,
-
-
-
-        color : '#red',
+        color:'red',
+        background :'black',
         size: '50px',
     })
 }
@@ -31,6 +29,6 @@ export default {
 
 
 <style >
-.active{background: red;}
+.active{background-color: red;}
 .green{color: #00FF00;}
 </style>
