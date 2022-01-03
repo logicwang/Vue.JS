@@ -20,37 +20,37 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Demo from './components/data.vue';
-import Demo2 from './components/demo2.vue';
-import Demo3 from './components/demo3.vue';
-import Demo4 from './components/demo4.vue';
+import Demo from "./components/data.vue";
+import Demo2 from "./components/demo2.vue";
+import Demo3 from "./components/demo3.vue";
+import Demo4 from "./components/demo4.vue";
 // import Demo5 from './components/demo5.vue';
-import Demo6 from './components/demo6.vue';
+import Demo6 from "./components/demo6.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   methods: {
-    show(){
-      console.log('sss', this.seen)
-      this.seen = !this.seen
-    }
+    show() {
+      console.log("sss", this.seen);
+      this.seen = !this.seen;
+    },
   },
   data() {
     return {
-      message: 'x',
-      seen: false
-    }
+      message: "x",
+      seen: false,
+    };
   },
   components: {
-    'v-demo': Demo,
-    'v-demo2': Demo2,
-    'v-demo3': Demo3,
-    'v-demo4': Demo4,
+    "v-demo": Demo,
+    "v-demo2": Demo2,
+    "v-demo3": Demo3,
+    "v-demo4": Demo4,
     // 'v-demo5': Demo5,
-    'v-demo6': Demo6,
+    "v-demo6": Demo6,
     // HelloWorld
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -63,7 +63,7 @@ export default {
   margin-top: 60px;
 }
 .WYF {
-  position:fixed;
+  position: fixed;
   background-color: #33333373;
   left: 0;
   right: 0;
