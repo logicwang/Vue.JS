@@ -44,7 +44,7 @@ export default {
     'v-demo2': Demo2,
     'v-demo3': Demo3,
     'v-demo4': Demo4,
-    'v-demo5': Demo5,
+    // 'v-demo5': Demo5,
     // HelloWorld
   }
 }
