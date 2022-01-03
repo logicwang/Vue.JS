@@ -4,16 +4,12 @@
             style="width: 200px;height: 200px;line-height: 200px;background-color: red;">
             hi,vue
         </div>
-
-
         <div :style="{color: color,fontSize:size,background: background}">
             Vue
         </div>
-
-
-
     </div>
 </template>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script>
 export default {
     e1: "#app",
@@ -26,8 +22,6 @@ export default {
     })
 }
 </script>
-
-
 <style >
 .active{background-color: red;}
 .green{color: #00FF00;}
