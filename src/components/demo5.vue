@@ -1,21 +1,65 @@
 <template>
-  <div>
-    <ul id="v-for-object" class="demo">
-      <li v-for="value in object" v-bind:key="value.id">
-        {{ value }}
-      </li>
-    </ul>
-  </div>
+    
+<div id="todo-list-example">
+  <form v-on:submit.prevent="addNewTodo">
+    <label for="new-todo">Add a todo</label>
+    <input
+      v-model="newTodoText"
+      id="new-todo"
+      placeholder="E.g. Feed the cat"
+    >
+    <button>Add</button>
+  </form>
+  <ul>
+    <li
+      is="todo-item"
+      v-for="(todo, index) in todos"
+      v-bind:key="todo.id"
+      v-bind:title="todo.title"
+      v-on:remove="todos.splice(index, 1)"
+    ></li>
+  </ul>
+</div>
 </template>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js">
+Vue.component('todo-item', {
+  template: '\
+    <li>\
+      {{ title }}\
+      <button v-on:click="$emit(\'remove\')">Remove</button>\
+    </li>\
+  ',
+  props: ['title']
+})
+
 new Vue({
-  el: "#v-for-object",
+  el: '#todo-list-example',
   data: {
-    object: {
-      title: "How to do lists in Vue",
-      author: "Jane Doe",
-      publishedAt: "2016-04-10",
-    },
+    newTodoText: '',
+    todos: [
+      {
+        id: 1,
+        title: 'Do the dishes',
+      },
+      {
+        id: 2,
+        title: 'Take out the trash',
+      },
+      {
+        id: 3,
+        title: 'Mow the lawn'
+      }
+    ],
+    nextTodoId: 4
   },
-});
+  methods: {
+    addNewTodo: function () {
+      this.todos.push({
+        id: this.nextTodoId++,
+        title: this.newTodoText
+      })
+      this.newTodoText = ''
+    }
+  }
+})
 </script>
