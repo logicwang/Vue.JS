@@ -13,7 +13,7 @@
     <v-demo2></v-demo2>
     <v-demo3></v-demo3>
     <v-demo4></v-demo4>
-    <!-- <v-demo5></v-demo5> -->
+    <v-demo5></v-demo5>
     <v-demo6></v-demo6>
   </div>
 </template>
@@ -24,7 +24,7 @@ import Demo from "./components/data.vue";
 import Demo2 from "./components/demo2.vue";
 import Demo3 from "./components/demo3.vue";
 import Demo4 from "./components/demo4.vue";
-// import Demo5 from './components/demo5.vue';
+import Demo5 from './components/demo5.vue';
 import Demo6 from "./components/demo6.vue";
 
 export default {
@@ -46,7 +46,7 @@ export default {
     "v-demo2": Demo2,
     "v-demo3": Demo3,
     "v-demo4": Demo4,
-    // 'v-demo5': Demo5,
+    'v-demo5': Demo5,
     "v-demo6": Demo6,
     // HelloWorld
   },
