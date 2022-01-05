@@ -7,16 +7,14 @@
     <p style="white-space: pre-line">{{ message2 }}</p>
     <br />
     <textarea v-model="message2" placeholder="add multiple lines"></textarea>
-    <ul style="marging-top:20px;">
-      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
-      <label for="jack">Jack</label>
-      <input type="checkbox" id="john" value="John" v-model="checkedNames" />
-      <label for="john">John</label>
-      <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
-      <label for="mike">Mike</label>
-      <br />
-      <span>Checked names: {{ checkedNames }}</span>
-    </ul>
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
+    <label for="jack">Jack</label>
+    <input type="checkbox" id="john" value="John" v-model="checkedNames" />
+    <label for="john">John</label>
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
+    <label for="mike">Mike</label>
+    <br />
+    <span>Checked names: {{ checkedNames }}</span>
   </div>
 </template>
 <script>
@@ -25,7 +23,7 @@ export default {
   data: () => ({
     message: "aaaa",
     message2: "bbb",
-    checkedNames: []
+    checkedNames: [],
   }),
 };
 </script>
