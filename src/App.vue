@@ -15,6 +15,7 @@
     <v-demo4></v-demo4>
     <v-demo5></v-demo5>
     <v-demo6></v-demo6>
+    <v-demo7></v-demo7>
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import Demo3 from "./components/demo3.vue";
 import Demo4 from "./components/demo4.vue";
 import Demo5 from './components/demo5.vue';
 import Demo6 from "./components/demo6.vue";
+import Demo7 from "./components/demo7.vue";
 
 export default {
   name: "App",
@@ -48,6 +50,7 @@ export default {
     "v-demo4": Demo4,
     'v-demo5': Demo5,
     "v-demo6": Demo6,
+    "v-demo7": Demo7,
     // HelloWorld
   },
 };
