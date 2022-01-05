@@ -6,14 +6,16 @@
     <span>Multiline message2 is:</span>
     <p style="white-space: pre-line">{{ message2 }}</p>
     <br />
-    <textarea v-model="message2" placeholder="add multiple lines"></textarea>
-    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
-    <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John" v-model="checkedNames" />
-    <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
-    <label for="mike">Mike</label>
-    <br />
+    <ul>
+      <textarea v-model="message2" placeholder="add multiple lines"></textarea>
+      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
+      <label for="jack">Jack</label>
+      <input type="checkbox" id="john" value="John" v-model="checkedNames" />
+      <label for="john">John</label>
+      <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
+      <label for="mike">Mike</label>
+      <br />
+    </ul>
     <span>Checked names: {{ checkedNames }}</span>
   </div>
 </template>
