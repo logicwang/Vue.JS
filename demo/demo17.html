@@ -9,17 +9,20 @@
 </head>
 
 <body>
-    <select v-model="selected">
-        <option disabled value="">请选择</option>
-        <option>A</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    <span>Selected: {{ selected }}</span>
+    <div id="example-6">
+        <select v-model="selected">
+            <option disabled value="">请选择</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script type="module">
         export default {
-            data(){
+            el: '#example-6',
+            data() {
                 selected: 'aaaaa'
             }
         }
