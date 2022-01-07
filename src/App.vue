@@ -19,6 +19,7 @@
     <v-demo8></v-demo8>
 <v-demo10></v-demo10>
 <v-demo11></v-demo11>
+<v-demo12></v-demo12>
         <!-- <v-demo9></v-demo9> -->
 
   </div>
@@ -37,6 +38,7 @@ import Demo8 from "./components/demo8.vue";
 // import Demo9 from "./components/demo9.vue";
 import Demo10 from "./components/demo10.vue";
 import Demo11 from "./components/demo11.vue";
+import Demo12 from "./components/demo12.vue";
 
 export default {
   name: "App",
@@ -64,6 +66,7 @@ export default {
     // "v-demo9": Demo9,
     "v-demo10": Demo10,
     "v-demo11": Demo11,
+    "v-demo12": Demo12,
 
 // HelloWorld
   },
