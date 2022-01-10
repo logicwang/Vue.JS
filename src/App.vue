@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <hr>
     <button @click="show" type="button">xxxx</button>
     <div v-if="seen" class="WYF">
       <div class="box">
@@ -10,6 +11,7 @@
     {{ message }}
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <v-demo></v-demo>
+<hr>
     <v-demo2></v-demo2>
     <v-demo3></v-demo3>
     <v-demo4></v-demo4>
@@ -21,8 +23,9 @@
     <v-demo10></v-demo10>
     <v-demo11></v-demo11>
     <v-demo12></v-demo12>
-    <v-demo13></v-demo13>
-    <v-demo14></v-demo14>
+    <!-- <v-demo13></v-demo13> -->
+    <!-- <v-demo14></v-demo14> -->
+    <v-demo15></v-demo15>
   </div>
 </template>
 
@@ -40,8 +43,9 @@ import Demo9 from "./components/demo9.vue";
 import Demo10 from "./components/demo10.vue";
 import Demo11 from "./components/demo11.vue";
 import Demo12 from "./components/demo12.vue";
-import Demo13 from "./components/demo13.vue";
-import Demo14 from "./components/demo14.vue";
+// import Demo13 from "./components/demo13.vue";
+// import Demo14 from "./components/demo14.vue";
+import Demo15 from "./components/demo15.vue";
 export default {
   name: "App",
   methods: {
@@ -69,8 +73,9 @@ export default {
     "v-demo10": Demo10,
     "v-demo11": Demo11,
     "v-demo12": Demo12,
-    "v-demo13": Demo13,
-    "v-demo14": Demo14,
+    // "v-demo13": Demo13,
+    // "v-demo14": Demo14,
+    "v-demo15": Demo15,
 
     // HelloWorld
   },

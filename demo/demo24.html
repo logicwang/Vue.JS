@@ -15,17 +15,20 @@
         <div class="blog-post">
             <h3>{{ post.title }}</h3>
             <div v-html="post.content"></div>
+            
+            <blog-post ... v-on:enlarge-text="postFontSize += 0.1"></blog-post>
         </div>
-        <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></blog-post>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
-        export default ({
-            data() {
-                return ('blog-post', {
-                    props: ['title'],
-                })
-            }
+        Vue.component('blog-post', {
+            props: ['post'],
+            template: `
+    <div class="blog-post">
+      <h3>{{ post.title }}</h3>
+      <div v-html="post.content"></div>
+    </div>
+  `
         })
     </script>
 </body>

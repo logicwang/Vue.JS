@@ -1,5 +1,6 @@
 <template>
   <div>
+    99999
     <select v-model="selected" multiple style="width: 50px">
       <option>A</option>
       <option>B</option>
@@ -11,8 +12,31 @@
 </template>
 <script>
 export default {
-  data() {
-    selected: [aaaaaaa];
+  //   data: () => {
+  //     return  {
+
+  //       selected: ['C'],
+  //     }
+  // },
+    data: function() {
+      return  {
+        selected: ['C'],
+      }
   },
+  // data() {
+  //   return  {
+
+  //     selected: ['aaaaa'],
+  //   }
+  // },
 };
+
+
+// function wang()  {
+
+// }
+
+// const wang1 = () => {
+
+// }
 </script>

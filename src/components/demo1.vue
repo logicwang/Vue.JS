@@ -1,5 +1,5 @@
 <template>
-   <div id="example">
+   <div class="example" id="example">
         <p>Original message: "{{ message }}"</p>
         <p>Computed reversed message: "{{ reversedMessage }}"</p>
     </div>
@@ -7,17 +7,23 @@
 
 
 <script>
-        var vm = new Vue({
-            el: '#example',
-            data: {
-                message: 'WANGYUFEI'
-            },
-            computed: {
-                // 计算属性的 getter
-                reversedMessage: function () {
-                    // `this` 指向 vm 实例
-                    return this.message.split('').reverse().join('')
-                }
-            }
-        })
+var vm = new Vue({
+    el: '#example',
+    data: {
+        message: 'WANGYUFEI'
+    },
+    computed: {
+        // 计算属性的 getter
+        reversedMessage: function () {
+            // `this` 指向 vm 实例
+            return this.message.split('').reverse().join('')
+        }
+    }
+})
 </script>
+
+<style>
+.example {
+    background-color: red;
+}
+</style>
