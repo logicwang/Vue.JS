@@ -12,13 +12,29 @@
     <div id="app">
         <p>{{ foo }}</p>
         <!-- 这里的 `foo` 不会更新！ -->
-        <button v-on:click="foo = 'aaaa'">Change it</button>
+        <button v-on:click="foo = 'aaa'">Change it</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script>
+        var data = { a: 1 }
+        var vm = new Vue({
+            el: '#example',
+            data: data
+        })
+
+        vm.$data === data // => true
+        vm.$el === document.getElementById('example') // => true
+
+        // $watch 是一个实例方法
+        vm.$watch('a', function (newValue, oldValue) {
+            // 这个回调将在 `vm.a` 改变后调用
+        })
         var obj = {
             foo: 'bar'
         }
+
+        Object.freeze(obj)
+
         new Vue({
             el: '#app',
             data: obj
