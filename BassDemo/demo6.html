@@ -16,15 +16,11 @@
             el: '#demo',
             data: {
                 firstName: 'Foo',
-                lastName: 'Bar',
-                fullName: 'Foo Bar'
+                lastName: 'Bar'
             },
-            watch: {
-                firstName(val) {
-                    this.fullName = val + ' ' + this.lastName
-                },
-                lastName(val) {
-                    this.fullName = this.firstName + ' ' + val
+            computed: {
+                fullName: function () {
+                    return this.firstName + ' ' + this.lastName
                 }
             }
         })
