@@ -23,8 +23,8 @@
     <v-demo10></v-demo10>
     <v-demo11></v-demo11>
     <v-demo12></v-demo12>
-    <!-- <v-demo13></v-demo13> -->
-    <!-- <v-demo14></v-demo14> -->
+    <v-demo13></v-demo13>
+    <v-demo14></v-demo14>
     <v-demo15></v-demo15>
   </div>
 </template>
