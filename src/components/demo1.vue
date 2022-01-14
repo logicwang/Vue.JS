@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: "wangyufeis",
+      message: "wangyufei",
     };
   },
   computed: {
