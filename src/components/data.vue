@@ -3,6 +3,7 @@
         <p>Original message: "{{ message }}"</p>
         <p>Computed reversed message: "{{ reversedMessage }}"</p>
     </div>
+    <!--出处: https://cn.vuejs.org/v2/guide/class-and-style.html -->
 </template>
 
 
