@@ -1,28 +1,19 @@
-
-
 <template>
-  <div v-if="type === 'A'">A</div>
-  <div class="example" v-else-if="type === 'B'">B</div>
-  <div v-else-if="type === 'C'">C</div>
-  <div v-else>Not A/B/C</div>
+  <div id="demo">{{ fullName }}</div>
 </template>
 
 <script>
-// import demo2 from './components/demo2.vue';
-// var vm = new Vue({
-//     e1: "#app",
-//     data: {
-//         type: "A",
-//     },
-// });
+export default{
+  e1 : "demo",
+  return:{
+    data: {
+    firstName: 'Foo',
+    lastName: 'Bar'
+  },
+  computed: {
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
 
-export default {
-    e1: "#app",
-    data() {
-        return {
-            type: "B",
-        }
-    },
-
-}
 </script>
