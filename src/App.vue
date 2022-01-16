@@ -14,21 +14,21 @@
     <hr />
    <v-demo2></v-demo2> 
     <hr />
-    <!-- <v-demo3></v-demo3>
+    <v-demo3></v-demo3>
     <hr />
-    <v-demo4></v-demo4>
-    <hr />
-    <v-demo5></v-demo5>
-    <v-demo6></v-demo6>
-    <v-demo7></v-demo7>
-    <v-demo8></v-demo8>
-    <v-demo9></v-demo9>
-    <v-demo10></v-demo10>
-    <v-demo11></v-demo11>
-    <v-demo12></v-demo12>
-    <v-demo13></v-demo13>
-    <v-demo14></v-demo14>
-    <v-demo15></v-demo15>  -->
+    <!-- <v-demo4></v-demo4> -->
+    <!-- <hr /> -->
+    <!-- <v-demo5></v-demo5> -->
+    <!-- <v-demo6></v-demo6> -->
+    <!-- <v-demo7></v-demo7> -->
+    <!-- <v-demo8></v-demo8> -->
+    <!-- <v-demo9></v-demo9> -->
+    <!-- <v-demo10></v-demo10> -->
+    <!-- <v-demo11></v-demo11> -->
+    <!-- <v-demo12></v-demo12> -->
+    <!-- <v-demo13></v-demo13> -->
+    <!-- <v-demo14></v-demo14> -->
+    <!-- <v-demo15></v-demo15>  -->
   </div>
 </template>
 
@@ -36,7 +36,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Demo1 from "./components/demo1.vue";
 import Demo2 from "./components/demo2.vue";
-// import Demo3 from "./components/demo3.vue";
+import Demo3 from "./components/demo3.vue";
 // import Demo4 from "./components/demo4.vue";
 // import Demo5 from "./components/demo5.vue";
 // import Demo6 from "./components/demo6.vue";
@@ -66,7 +66,7 @@ export default {
   components: {
     "v-demo1": Demo1,
     "v-demo2": Demo2,
-    // "v-demo3": Demo3,
+    "v-demo3": Demo3,
     // "v-demo4": Demo4,
     // "v-demo5": Demo5,
     // "v-demo6": Demo6,
