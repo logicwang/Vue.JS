@@ -1,33 +1,34 @@
 <template>
-<div>
+  <div>
     <div
-      style="width: 200px; height: 200px; line-height: 200px "
+      style="width: 200px; height: 200px; line-height: 200px;"
       v-bind:class="{ active: isActive, green: isGreen }"
     >
       hi vue
     </div>
-    <div style="{color : color , fontSize : size}">
-      shit vue
+    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' , background  : background}">
+      vue.js
     </div>
-</div>
+  </div>
 </template>
 <script>
     export default {
       data: () => ({
         isActive: true,
         isGreen: true,
-        color: '#FF0000',
-        size: '60px'
+        activeColor: "red",
+        fontSize: 30,
+        background: "black"
       }),
     };
 </script>
 <style>
-      .active {
-        background: red;
-        margin-top: 50px;
-        font-size: 30px;
-      }
-      .green {
-        color: yellow;
-      }
+.active {
+  background: red;
+  margin-top: 50px;
+  font-size: 30px;
+}
+.green {
+  color: yellow;
+}
 </style>
