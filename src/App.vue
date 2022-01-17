@@ -19,7 +19,9 @@
     <v-demo4></v-demo4>
     <hr />
     <v-demo5></v-demo5>
+     <hr />
     <v-demo6></v-demo6>
+     <hr />
     <!-- <v-demo7></v-demo7> -->
     <!-- <v-demo8></v-demo8> -->
     <!-- <v-demo9></v-demo9> -->
