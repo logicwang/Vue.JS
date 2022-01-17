@@ -19,7 +19,7 @@
     <v-demo4></v-demo4>
     <hr />
     <v-demo5></v-demo5>
-    <!-- <v-demo6></v-demo6> -->
+    <v-demo6></v-demo6>
     <!-- <v-demo7></v-demo7> -->
     <!-- <v-demo8></v-demo8> -->
     <!-- <v-demo9></v-demo9> -->
@@ -39,7 +39,7 @@ import Demo2 from "./components/demo2.vue";
 import Demo3 from "./components/demo3.vue";
 import Demo4 from "./components/demo4.vue";
 import Demo5 from "./components/demo5.vue";
-// import Demo6 from "./components/demo6.vue";
+import Demo6 from "./components/demo6.vue";
 // import Demo7 from "./components/demo7.vue";
 // import Demo8 from "./components/demo8.vue";
 // import Demo9 from "./components/demo9.vue";
@@ -69,7 +69,7 @@ export default {
     "v-demo3": Demo3,
     "v-demo4": Demo4,
     "v-demo5": Demo5,
-    // "v-demo6": Demo6,
+    "v-demo6": Demo6,
     // "v-demo7": Demo7,
     // "v-demo8": Demo8,
     // "v-demo9": Demo9,
