@@ -19,11 +19,13 @@
     <v-demo4></v-demo4>
     <hr />
     <v-demo5></v-demo5>
-     <hr />
+    <hr />
     <v-demo6></v-demo6>
-     <hr />
+    <hr />
     <v-demo7></v-demo7>
-    <!-- <v-demo8></v-demo8> -->
+    <hr />
+    <v-demo8></v-demo8>
+    <hr />
     <!-- <v-demo9></v-demo9> -->
     <!-- <v-demo10></v-demo10> -->
     <!-- <v-demo11></v-demo11> -->
@@ -43,7 +45,7 @@ import Demo4 from "./components/demo4.vue";
 import Demo5 from "./components/demo5.vue";
 import Demo6 from "./components/demo6.vue";
 import Demo7 from "./components/demo7.vue";
-// import Demo8 from "./components/demo8.vue";
+import Demo8 from "./components/demo8.vue";
 // import Demo9 from "./components/demo9.vue";
 // import Demo10 from "./components/demo10.vue";
 // import Demo11 from "./components/demo11.vue";
@@ -73,7 +75,7 @@ export default {
     "v-demo5": Demo5,
     "v-demo6": Demo6,
     "v-demo7": Demo7,
-    // "v-demo8": Demo8,
+    "v-demo8": Demo8,
     // "v-demo9": Demo9,
     // "v-demo10": Demo10,
     // "v-demo11": Demo11,
@@ -112,5 +114,9 @@ export default {
   background-color: #fff;
   min-width: 320px;
   min-height: 210px;
+}
+hr{
+  margin-top: 20px;
+  border:3px solid #ff000f;
 }
 </style>
