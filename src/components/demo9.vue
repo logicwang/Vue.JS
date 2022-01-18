@@ -1,6 +1,5 @@
 <template>
   <div>
-    99999
     <select v-model="selected" multiple style="width: 50px">
       <option>A</option>
       <option>B</option>
