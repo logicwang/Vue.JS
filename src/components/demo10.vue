@@ -13,7 +13,7 @@
 
 export default {
   data: () => ({
-        parentMessage: 'Parent',
+    parentMessage: 'Parent',
     items: [
       { message: "Foo", aaa: 22222 }, 
       { message: "Bar", aaa: '' }
