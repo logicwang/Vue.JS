@@ -1,11 +1,19 @@
 <template>
-  <button v-on:click="count++">You clicked me {{ count }} times.</button>
+  <ul class="demo">
+    <li v-for="value in object" :key="value">
+      {{ value }}
+    </li>
+  </ul>
 </template>
 <script>
 export default {
   data() {
     return {
-      count: 0,
+      object: {
+        title: "How to do lists in Vue",
+        author: "Jane Doe",
+        publishedAt: "2016-04-10",
+      },
     };
   },
 };
