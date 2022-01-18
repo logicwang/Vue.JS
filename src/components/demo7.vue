@@ -1,21 +1,17 @@
 <template>
   <div>
-    <select v-model="selected">
-      <option disabled value="">请选择</option>
-      <option>A</option>
-      <option>B</option>
-      <option>C</option>
-    </select>
-    <span>Selected: {{ selected }}</span>
+    <div v-if="type === 'A'">A</div>
+    <div v-if="type === 'b'">b</div>
+    <div v-else-if="type === 'c'">c</div>
+    <div v-else>Not A/B/C</div>
   </div>
 </template>
 <script>
 export default {
-  data:()=> {
-    return({
-      selected: []
-    })
+  data: () => {
+    return {
+      type :"A",
+    };
   },
 };
 </script>
-    
