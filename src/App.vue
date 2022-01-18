@@ -8,7 +8,7 @@
         <button @click="show" type="button">关闭</button>
       </div>
     </div>
-    {{ message }}w
+    {{ message }}
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <v-demo1></v-demo1>
     <hr />
@@ -33,7 +33,9 @@
     <v-demo11></v-demo11>
     <hr />
     <v-demo12></v-demo12>
-    <!-- <v-demo13></v-demo13> -->
+    <hr />
+    <v-demo13></v-demo13>
+    <hr />
     <!-- <v-demo14></v-demo14> -->
     <!-- <v-demo15></v-demo15>  -->
   </div>
@@ -53,7 +55,7 @@ import Demo9 from "./components/demo9.vue";
 import Demo10 from "./components/demo10.vue";
 import Demo11 from "./components/demo11.vue";
 import Demo12 from "./components/demo12.vue";
-// import Demo13 from "./components/demo13.vue";
+import Demo13 from "./components/demo13.vue";
 // import Demo14 from "./components/demo14.vue";
 // import Demo15 from "./components/demo15.vue";
 export default {
@@ -83,7 +85,7 @@ export default {
     "v-demo10": Demo10,
     "v-demo11": Demo11,
     "v-demo12": Demo12,
-    // "v-demo13": Demo13,
+    "v-demo13": Demo13,
     // "v-demo14": Demo14,
     // "v-demo15": Demo15,
 
@@ -121,5 +123,8 @@ export default {
 hr{
   margin-top: 20px;
   border:3px solid #ff000f;
+}
+ul{
+  list-style:none;
 }
 </style>
