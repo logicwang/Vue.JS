@@ -4,6 +4,7 @@
       {{ value }}
     </li>
   </ul>
+  <!-- 出处：https://cn.vuejs.org/v2/guide/list.html -->
 </template>
 <script>
 export default {
