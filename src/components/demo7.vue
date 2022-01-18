@@ -7,13 +7,14 @@
     <h1 v-show="ko">h1111</h1>
     <!-- 出处： https://cn.vuejs.org/v2/guide/conditional.html -->
   </div>
+
 </template>
 <script>
 export default {
   data: () => {
     return {
-      type :"A",
-      ko:true
+      type: "A",
+      ko: true,
     };
   },
 };
