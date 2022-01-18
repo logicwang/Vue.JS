@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul id="example-1">
+    <ul>
       <li v-for="item in items" :key="item.message">
         {{ item.message }}
       </li>
