@@ -4,6 +4,7 @@
       <li v-for="aaa in even(set)" :key="aaa">{{ aaa }}</li>
     </ul>
   </div>
+  <!-- 出处：https://cn.vuejs.org/v2/guide/list.html 显示过滤/排序后的结果 -->
 </template>
 <script>
 export default {
