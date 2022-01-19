@@ -1,24 +1,14 @@
 <template>
-<div class="blog-post">
-  <h3>{{ title }}</h3>
-  <div v-html="content"></div>
- <blog-post
-  v-for="post in posts"
-  v-bind:key="post.id"
-  v-bind:post="post"
-></blog-post>
+<div>
+  <span v-for="n in 10" :key="n">{{ n }} </span>
 </div>
-
 </template>
 <script>
-Vue.component('blog-post', {
-  props: ['post'],
-  template: `
-    <div class="blog-post">
-      <h3>{{ post.title }}</h3>
-      <div v-html="post.content"></div>
-    </
-    div>
-  `
-})
+export default {
+  data(){
+    return{
+      n: [ 1, 2, 3, 4, 5 ]
+    }
+  }
+}
 </script>
