@@ -38,7 +38,7 @@
     <hr />
     <v-demo14></v-demo14>
     <hr />
-    <!-- <v-demo15></v-demo15>  -->
+    <v-demo15></v-demo15> 
   </div>
 </template>
 
@@ -58,7 +58,7 @@ import Demo11 from "./components/demo11.vue";
 import Demo12 from "./components/demo12.vue";
 import Demo13 from "./components/demo13.vue";
 import Demo14 from "./components/demo14.vue";
-// import Demo15 from "./components/demo15.vue";
+import Demo15 from "./components/demo15.vue";
 export default {
   name: "App",
   methods: {
@@ -88,7 +88,7 @@ export default {
     "v-demo12": Demo12,
     "v-demo13": Demo13,
     "v-demo14": Demo14,
-    // "v-demo15": Demo15,
+    "v-demo15": Demo15,
 
     // HelloWorld
   },

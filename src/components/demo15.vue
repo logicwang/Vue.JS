@@ -1,17 +1,17 @@
 <template>
-<div>
-  <div class="example">hixxxxx</div>
-  <div class="">hixxxxx</div>
-
-
-</div>
+  <ul v-if="todos.length">
+    <li v-for="todo in todos" :key="todo">
+      {{ todo }}
+    </li>
+  </ul>
+  <p v-else>No todos left!</p>
 </template>
-<script>  
-
-
+<script>
+export default {
+  data() {
+    return {
+      todo: [1, 2, 3, 4, 5],
+    };
+  },
+};
 </script>
-<style scoped>
-.example {
-  color: red;
-}
-</style>
