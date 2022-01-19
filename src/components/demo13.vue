@@ -1,18 +1,30 @@
 <template>
   <div>
-    test
+    <ul v-for="set in sets" :key="set">
+      <li v-for="aaa in even(set)" :key="aaa">{{ aaa }}</li>
+    </ul>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      posts: [
-        { id: 1, title: "My journey with Vue" },
-        { id: 2, title: "Blogging with Vue" },
-        { id: 3, title: "Why Vue is so fun" },
+      set: [
+        [1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10],
+      ],
+        aaa: [
+        [1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10],
       ],
     };
   },
+  methods: {
+  even (numbers) {
+    return numbers.filter(function (number) {
+      return number % 2 === 0
+    })
+  }
+}
 };
 </script>
