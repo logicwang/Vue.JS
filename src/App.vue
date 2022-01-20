@@ -40,7 +40,9 @@
     <hr />
     <v-demo15></v-demo15> 
     <hr />
-    <v-demo16></v-demo16> 
+    <!-- <v-demo16></v-demo16>  -->
+    <hr />
+     <v-demo17></v-demo17> 
   </div>
 </template>
 
@@ -61,7 +63,8 @@ import Demo12 from "./components/demo12.vue";
 import Demo13 from "./components/demo13.vue";
 import Demo14 from "./components/demo14.vue";
 import Demo15 from "./components/demo15.vue";
-import Demo16 from "./components/demo16.vue";
+// import Demo16 from "./components/demo16.vue";
+import Demo17 from "./components/demo17.vue";
 export default {
   name: "App",
   methods: {
@@ -92,7 +95,8 @@ export default {
     "v-demo13": Demo13,
     "v-demo14": Demo14,
     "v-demo15": Demo15,
-    "v-demo16": Demo16,
+    // "v-demo16": Demo16,
+    "v-demo17": Demo17,
 
     // HelloWorld
   },
