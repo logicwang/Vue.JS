@@ -6,13 +6,10 @@
     </p>
     <p>{{ answer }}</p>
   </div>
-  <!-- 出处:https://cn.vuejs.org/v2/guide/computed.html -->
 </template>
-<!-- 因为 AJAX 库和通用工具的生态已经相当丰富，Vue 核心代码没有重复 -->
-<!-- 提供这些功能以保持精简。这也可以让你自由选择自己更熟悉的工具。 -->
-<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 <script>
+import axios from 'axios';
+import _ from 'lodash';
 export default {
   data: () => ({
     question: "",

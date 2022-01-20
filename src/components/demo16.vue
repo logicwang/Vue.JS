@@ -25,13 +25,11 @@
   </div>
 </template>
 <script>
-Vue.component("todo-item", {
-
-  props: ["title"],
-});
 export default{
-  el: "#todo-list-example",
+//   el: "#todo-list-example",
   data(){
+
+      return {
     newTodoText: "",
     todos: [
       {
@@ -47,7 +45,7 @@ export default{
         title: "Mow the lawn",
       },
     ],
-    nextTodoId: 4,
+    nextTodoId: 4,}
   },
   methods: {
     addNewTodo  () {
