@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.4.3",
+    "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "hexo-server": "^2.0.0",
+    "lodash": "^4.17.21",
     "vue": "^2.6.11"
   },
   "devDependencies": {
