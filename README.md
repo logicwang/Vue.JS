@@ -1,30 +1,4 @@
 # 如何安装vue项目 #
-<!-- more -->
-
-## CDN ##
-
-对于制作原型或学习，你可以这样使用最新版本：
-```
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-```
-
-对于生产环境，我们推荐链接到一个明确的版本号和构建文件，以避免新版本造成的不可预期的破坏:
-```
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-```
-
-如果你使用原生 ES Modules，这里也有一个兼容 ES Module 的构建文件：
-```
-<script type="module">
-  import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.js'
-</script>
-```
-
-你可以在 [cdn.jsdelivr.net/npm/vue。](https://cdn.jsdelivr.net/npm/vue/)浏览 NPM 包的源代码。
-
-Vue 也可以在 [unpkg](https://unpkg.com/vue@2.6.14/dist/vue.js) 和 [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js) 上获取 (cdnjs 的版本更新可能略滞后)。
-
-
 
 ## 创建一个项目
 
