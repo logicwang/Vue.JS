@@ -3,8 +3,8 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <button-counter></button-counter>
-    <button v-on:click="count++">你点击了我 {{ count }} 下</button>
   </div>
+
 </template>
 
 <script>
