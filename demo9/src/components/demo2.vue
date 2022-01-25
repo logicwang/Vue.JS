@@ -10,10 +10,10 @@
 
 export default {
   methods: {
-    say: function (message) {
+    say (message) {
       alert(message);
     },
-    warn: function (message, event) {
+    warn (message, event) {
       // 现在我们可以访问原生事件对象
       if (event) {
         event.preventDefault();
