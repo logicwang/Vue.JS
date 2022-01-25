@@ -10,6 +10,8 @@
     <v-demo3></v-demo3>
     <hr />
     <v-demo4></v-demo4>
+    <hr />
+    <v-demo5></v-demo5>
     <!--出处： https://cn.vuejs.org/v2/guide/forms.html -->
   </div>
 </template>
@@ -20,6 +22,7 @@ import Demo1 from "./components/demo1.vue";
 import Demo2 from "./components/demo2.vue";
 import Demo3 from "./components/demo3.vue";
 import Demo4 from "./components/demo4.vue";
+import Demo5 from "./components/demo5.vue";
 
 export default {
   components: {
@@ -27,6 +30,7 @@ export default {
     "v-demo2": Demo2,
     "v-demo3": Demo3,
     "v-demo4": Demo4,
+    "v-demo5": Demo5,
   },
   // name: 'App',
   // components: {
