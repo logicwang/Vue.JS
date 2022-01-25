@@ -10,6 +10,7 @@
     <v-demo2></v-demo2>
     <hr />
   </div>
+  <!--出处： https://cn.vuejs.org/v2/guide/events.html -->
 </template>
 
 <script>
