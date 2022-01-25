@@ -2,9 +2,7 @@
   <div>
     <button v-on:click="say('hi')">Say hi</button>
     <button v-on:click="say('what')">Say what</button>
-    <button v-on:click="warn('Form cannot be submitted yet.', $event)">
-      Submit
-    </button>
+    <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
   </div>
 </template>
 <script>
