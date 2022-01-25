@@ -4,11 +4,15 @@
     <p>The button above has been clicked {{ counter }} times.</p>
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <hr />
+    <v-demo1></v-demo1>
+    <hr />
   </div>
 </template>
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
+import Demo1 from "./components/demo1.vue";
 
 export default {
   // name: 'App',
@@ -19,6 +23,9 @@ export default {
     return{
       counter: 0
     }
+  },
+  components:{
+    "v-demo1": Demo1,
   }
 };
 </script>
@@ -32,4 +39,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 } */
+hr {
+  margin-top: 20px;
+  border: 3px solid #ff000f;
+}
+div{
+  text-align: center;
+}
 </style>
