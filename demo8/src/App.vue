@@ -13,26 +13,20 @@
       <li
         is="todo-item"
         v-for="(todo, index) in todos"
-        v-bind:key="todo.id"
-        v-bind:title="todo.title"
+      :key="todo.id"
+     :title="todo.title"
         v-on:remove="todos.splice(index, 1)"
       ></li>
+      <li>
+        {{ title }}
+        <button v-on:click="$emit('remove')">Remove</button>
+      </li>
     </ul>
-    <li>{{ title }}<button v-on:click="$emit('remove')">Remove</button></li>
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  // name: 'App',
-  // components: {
-  //   HelloWorld
-  // }
-  props: ["title"],
   data() {
     return {
       newTodoText: "",
@@ -50,19 +44,19 @@ export default {
           title: "Mow the lawn",
         },
       ],
-      nextTodoId: 4
+      nextTodoId: 4,
     };
   },
   methods: {
     addNewTodo () {
       this.todos.push({
         id: this.nextTodoId++,
-        title: this.newTodoText
-      })
-      this.newTodoText = ''
-    }
-  }
-}
+        title: this.newTodoText,
+      });
+      this.newTodoText = "";
+    },
+  },
+};
 </script>
 
 <style>
