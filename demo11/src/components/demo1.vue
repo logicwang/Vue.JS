@@ -1,16 +1,15 @@
 <template>
   <div>
-      <button-counter></button-counter>
-  <button-counter></button-counter>
-  <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button v-on:click="count++">You clicked me {{ count }} times.</button>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      count: 0
-    } 
+      count: 0,
+    };
   },
 };
 </script>
