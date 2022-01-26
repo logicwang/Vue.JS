@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button-counter></button-counter>
+    <!-- <button-counter></button-counter> -->
     <button v-on:click="count++">你点击了我 {{ count }} 次.</button>
   </div>
 </template>
