@@ -9,7 +9,6 @@
     <blog-post title="My journey with Vue"></blog-post>
     <blog-post title="Blogging with Vue"></blog-post>
     <blog-post title="Why Vue is so fun"></blog-post>
-
     <v-demo1></v-demo1>
   </div>
 </template>
