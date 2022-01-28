@@ -7,10 +7,11 @@
   </div>
 </template>
 <script>
-import Blogpost from "./Blogpost.vue";
+import BlogPost from './HelloWorld1.vue'
 export default {
+  name: "App",
   components: {
-    Blogpost,
+   BlogPost,
   },
 };
 </script>
