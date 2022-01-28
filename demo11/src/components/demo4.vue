@@ -3,7 +3,7 @@
     <blog-post title="My journey with Vue"></blog-post>
     <blog-post title="Blogging with Vue"></blog-post>
     <blog-post title="Why Vue is so fun"></blog-post>
-    <BlogPost></BlogPost>
+    <BlogPost></Blogpost>
   </div>
 </template>
 <script>

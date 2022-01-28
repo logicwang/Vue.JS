@@ -1,9 +1,8 @@
-<template>
-    
-</template>
+<template></template>
 <script>
-// import { defineComponent } from '@vue/composition-api'
-
 export default {
-}
+  data() {
+    return {};
+  },
+};
 </script>
