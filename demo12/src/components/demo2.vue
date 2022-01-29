@@ -6,7 +6,12 @@
 <script>
 import Aaa from "./Aaa.vue";
 export default {
-  name: "Aaa",
+  data() {
+    return {
+      name: "Aaa",
+      props: [Aaa],
+    };
+  },
   components: {
     Aaa,
   },
