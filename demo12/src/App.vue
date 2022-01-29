@@ -3,6 +3,8 @@
     <hr />
     <v-demo1></v-demo1>
     <hr />
+    <v-demo2></v-demo2>
+    <hr />
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
@@ -10,9 +12,11 @@
 
 <script>
 import Demo1 from "./components/demo1.vue";
+import Demo2 from "./components/demo2.vue";
 export default {
   components: {
     "v-demo1": Demo1,
+    "v-demo2": Demo2,
   },
 };
 // import HelloWorld from './components/HelloWorld.vue'
