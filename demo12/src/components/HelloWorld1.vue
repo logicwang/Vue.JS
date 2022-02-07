@@ -2,8 +2,8 @@
   <div>
     <h3>{{ title }}</h3>
     <button v-on:click="$emit('enlarge-text')">Enlarge text</button>
+    <!-- <blog-post ... v-on:enlarge-text="onEnlargeText"></blog-post> -->
     <!-- <blog-post ... v-on:enlarge-text="postFontSize += 1"></blog-post> -->
-    
   </div>
 </template>
 <script>
@@ -21,5 +21,10 @@ export default {
   //   ]
   //   }
   // }
+  methods: {
+    onEnlargeText: function (enlargeAmount) {
+      this.postFontSize += enlargeAmount;
+    },
+  },
 };
 </script>
