@@ -3,18 +3,16 @@
     <blog-post title="My journey with Vue"></blog-post>
     <blog-post title="Blogging with Vue"></blog-post>
     <blog-post title="Why Vue is so fun"></blog-post>
-    <BlogPost></Blogpost>
-    <!-- <WorldHellow></WorldHellow> -->
+    <button v-on:click="$emit('enlarge-text')">Enlarge text</button>
+    <BlogPost></BlogPost>
   </div>
 </template>
 <script>
-import BlogPost from './HelloWorld1.vue'
-// import WorldHellow from './HelloWorld2.vue'
+import BlogPost from "./HelloWorld1.vue";
 export default {
   name: "App",
   components: {
-   BlogPost,
-  //  WorldHellow
+    BlogPost,
   },
 };
 </script>
