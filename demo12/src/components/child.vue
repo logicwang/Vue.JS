@@ -1,5 +1,5 @@
 <template>
-  <div>child</div>
+  <div>child(子组件)</div>
 </template>
  
 <script>
