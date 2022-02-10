@@ -8,7 +8,7 @@ export default {
   data() {
     return {};
   },
-  props: "someprops",
+  // props: "someprops",
   methods: {
     parentHandleclick(e) {
       console.log(e);
