@@ -1,13 +1,13 @@
 <template>
   <div>
-    <!-- <child></child> -->
+    <child></child>
   </div>
 </template>
 <script>
-  // import child from './child1.vue';
+  import child from './child1.vue';
   export default {
     components: {
-      // child
+      child
     },
     methods: {
       fatherMethod() {
