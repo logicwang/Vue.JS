@@ -14,8 +14,9 @@
     <v-demo6></v-demo6>
     <hr />
     <v-demo7></v-demo7>
-     <hr />
-      <v-demo8></v-demo8>
+    <hr />
+    <v-demo8></v-demo8>
+    <hr />
   </div>
 </template>
 
