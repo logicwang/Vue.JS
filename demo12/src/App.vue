@@ -14,6 +14,8 @@
     <v-demo6></v-demo6>
     <hr />
     <v-demo7></v-demo7>
+     <hr />
+      <v-demo8></v-demo8>
   </div>
 </template>
 
@@ -25,6 +27,7 @@ import Demo4 from "./components/demo4.vue";
 import Demo5 from "./components/demo5.vue";
 import Demo6 from "./components/demo6.vue";
 import Demo7 from "./components/demo7.vue";
+import Demo8 from "./components/demo8.vue";
 export default {
   components: {
     "v-demo1": Demo1,
@@ -34,6 +37,7 @@ export default {
     "v-demo5": Demo5,
     "v-demo6": Demo6,
     "v-demo7": Demo7,
+    "v-demo8": Demo8,
   },
 };
 </script>
