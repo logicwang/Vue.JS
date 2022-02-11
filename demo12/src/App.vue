@@ -17,10 +17,13 @@
     <hr />
     <v-demo8></v-demo8>
     <hr />
+    <v-demo9></v-demo9>
+    <hr />
   </div>
 </template>
 
 <script>
+
 import Demo1 from "./components/demo1.vue";
 import Demo2 from "./components/demo2.vue";
 import Demo3 from "./components/demo3.vue";
@@ -29,6 +32,8 @@ import Demo5 from "./components/demo5.vue";
 import Demo6 from "./components/demo6.vue";
 import Demo7 from "./components/demo7.vue";
 import Demo8 from "./components/demo8.vue";
+import Demo9 from "./components/demo9.vue";
+
 export default {
   components: {
     "v-demo1": Demo1,
@@ -39,6 +44,7 @@ export default {
     "v-demo6": Demo6,
     "v-demo7": Demo7,
     "v-demo8": Demo8,
+    "v-demo9": Demo9,
   },
 };
 </script>
