@@ -11,7 +11,7 @@ import Son1 from './son.vue'
 export default {
   data () {
     return {
-      name: '小红'
+      name: '小王'
     }
   },
   components: { Son1 }

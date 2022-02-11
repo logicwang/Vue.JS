@@ -11,7 +11,7 @@
     props: ['value'],
     methods: {
       changeName () {
-        this.$emit('input', '小明')
+        this.$emit('input', '小黑')
       }
     }
   }
