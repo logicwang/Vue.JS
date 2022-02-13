@@ -21,7 +21,6 @@
     <hr />
     <v-demo10></v-demo10>
     <v-demo></v-demo>
-
   </div>
 </template>
 
@@ -49,7 +48,7 @@ export default {
     "v-demo7": Demo7,
     "v-demo8": Demo8,
     "v-demo9": Demo9,
-    "v-demo": Demo10,
+    "v-demo10": Demo10,
   },
 };
 </script>
