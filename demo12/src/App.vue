@@ -20,7 +20,6 @@
     <v-demo9></v-demo9>
     <hr />
     <v-demo10></v-demo10>
-    <v-demo></v-demo>
   </div>
 </template>
 
