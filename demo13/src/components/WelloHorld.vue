@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
     <h2>Essential Linkssss</h2>
     <h3>{{ message1 }}</h3>
