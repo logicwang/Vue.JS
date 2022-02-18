@@ -1,6 +1,6 @@
   <template id="simpleDemo">
   <div>
-    {{ myMessage }}
+    {{ msg }}
     <input v-model="parentMsg" />
     <br />
     <child v-bind:my-Message="parentMsg"></child>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// import child from "./Child.vue";
 export default {
   data() {
     return {
@@ -18,7 +19,7 @@ export default {
   components: {
     child: {
       template: "#simpleDemo",
-      props: ["myMessage"], //自定义名字
+      props: ["msg"], //自定义名字
     },
   },
 };
