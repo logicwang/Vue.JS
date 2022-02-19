@@ -17,6 +17,7 @@
   </table>
 </template>
 <script>
+
 export default {
   data() {
     return {
@@ -27,7 +28,7 @@ export default {
   components: {
     "my-component": {
       template: "#myComponent",
-      props: ["myName", "myAge"],
+      // props: ["myName", "myAge"],
     },
   },
 };

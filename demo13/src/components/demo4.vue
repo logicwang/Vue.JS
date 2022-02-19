@@ -1,26 +1,22 @@
-  <template id="simpleDemo">
+<template>
   <div>
-    {{ msg }}
-    <input v-model="parentMsg" />
-    <br />
-    <child v-bind:my-Message="parentMsg"></child>
-    <!--可以理解成var mymesage = parentMsg;-->
+    <button onclick="load">动态加载组件</button>
+    <component v-bind:is="currentTabComponent" :message="message"></component>
+    <span>{{ message }}</span>
   </div>
 </template>
-
 <script>
-// import child from "./Child.vue";
 export default {
   data() {
     return {
-      parentMsg: "hello Prop",
+      currentTabComponent: null,
+      message: "hello!",
     };
   },
-  components: {
-    child: {
-      template: "#simpleDemo",
-      props: ["msg"], //自定义名字
+  methods:{
+        load:function(){
+            this.currentTabComponent = 'child';
+        }
     },
-  },
 };
 </script>
