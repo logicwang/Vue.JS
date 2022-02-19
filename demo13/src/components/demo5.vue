@@ -1,35 +1,18 @@
- <template>
-  <table>
-    <tr>
-      <th colspan="2">子组件</th>
-    </tr>
-    <tr>
-      <td>名字</td>
-      <td>年龄</td>
-    </tr>
-    <tr>
-      <td>{{ myName }}</td>
-      <td>{{ myAge }}</td>
-    </tr>
-    <div id="app">
-      <my-component :my-name="name" :my-age="age"></my-component>
-    </div>
-  </table>
+<template>
+  <div>
+    <v-child info="message"></v-child>
+  </div>
 </template>
 <script>
-
+import Childs from './Chil.vue'
 export default {
-  data() {
-    return {
-      name: "小明",
-      age: 24,
-    };
+  components:{
+    'v-child':Childs
   },
-  components: {
-    "my-component": {
-      template: "#myComponent",
-      // props: ["myName", "myAge"],
-    },
-  },
-};
+  data(){
+    return{
+      message:'aaa'
+    }
+  }
+}
 </script>
