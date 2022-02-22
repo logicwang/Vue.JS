@@ -1,20 +1,18 @@
+<!-- child -->
 <template>
-  <div>
-    <p>我是子组件</p>
-    <p>子组件内容:{{ value }}</p>
-    <p><button @click="onChange">改变内容</button></p>
-  </div>
+<div class="child">
+  <p>他(子组件):{{give}}</p>
+  <a href="javascript:;" rel="external nofollow" @click="returnBackFn">回应</a>
+</div>
 </template>
 <script>
 export default {
   props: {
-    value: {
-      type: String
-    }
+    give: String
   },
   methods: {
-    onChange() {
-      this.value = '我是由子组件触发改变了内容'
+    returnBackFn() {
+      this.$emit('returnBack', '小李');
     }
   }
 }
