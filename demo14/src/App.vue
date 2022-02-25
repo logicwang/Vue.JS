@@ -9,8 +9,8 @@
     <hr />
     <v-demo4></v-demo4>
     <hr />
-    <!-- <v-demo5></v-demo5> -->
-    <!-- <hr /> -->
+    <v-demo5></v-demo5>
+    <hr />
   </div>
 </template>
 
@@ -19,7 +19,7 @@ import Demo1 from "./components/demo1.vue";
 import Demo2 from "./components/demo2.vue";
 import Demo3 from "./components/demo3.vue";
 import Demo4 from "./components/demo4.vue";
-// import Demo5 from "./components/demo5.vue";
+import Demo5 from "./components/demo5.vue";
 export default {
   name: "App",
   components: {
@@ -27,7 +27,7 @@ export default {
     "v-demo2": Demo2,
     "v-demo3": Demo3,
     "v-demo4": Demo4,
-    // "v-demo5": Demo5,
+    "v-demo5": Demo5,
   },
 };
 </script>
