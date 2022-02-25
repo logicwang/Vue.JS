@@ -1,26 +1,25 @@
 <template>
-  <div id="app">
+  <div>
+    <hr />
     <v-demo1></v-demo1>
+    <hr />
   </div>
 </template>
+
 <script>
 import Demo1 from "./components/demo1.vue";
-
 export default {
-  name: "App",
-  components: {
-    "v-demo1": Demo1,
-  },
+  "v-demo1": Demo1,
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 3px solid #ff000f;
+}
+div {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
