@@ -4,6 +4,7 @@
     <v-demo1></v-demo1>
     <hr />
     <v-demo2></v-demo2>
+    <hr />
   </div>
 </template>
 
