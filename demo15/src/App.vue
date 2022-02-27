@@ -21,8 +21,7 @@ export default {
 
 <style>
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
   border: 3px solid #ff000f;
 }
 div {
