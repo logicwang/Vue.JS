@@ -1,5 +1,6 @@
 <template>
   <div>
+    demo1
     <div>slot内容分发</div>
     <Weather>
       <template slot="header">
@@ -28,9 +29,6 @@ export default {
   color: black;
 }
 
-.header {
-  background: yellow;
-}
 p{
   color: black;
 

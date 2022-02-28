@@ -1,5 +1,6 @@
 <template>
   <div>
+    demo2
     <span slot="center" v-show="showIt"> {{ msg }}</span>
     <div>
       <span>左边</span>

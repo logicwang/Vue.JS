@@ -1,19 +1,11 @@
 <template>
   <div>
+    demo3
     <v-home></v-home>
-    <hr />
-    <br />
     <v-news></v-news>
   </div>
 </template>
 <script>
-/*
-  1、引入组件
-
-  2、挂载组件
-
-  3、在模板中使用
-  */
 import Home from "./Home.vue";
 import News from "./News.vue";
 export default {
@@ -23,7 +15,7 @@ export default {
     };
   },
   components: {
-    /*前面的组件名称不能和html标签一样*/ "v-home": Home,
+    "v-home": Home,
     "v-news": News,
   },
 };
