@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-header></v-header>
-    <h2>这是一个新闻组件</h2>
+    <h2>aaaaaaaaa</h2>
 
     <ul>
-      <li>111111</li>
-      <li>2222</li>
-      <li>333333</li>
+      <li>vvvvvvvv</li>
+      <li>xxxxxxxx</li>
+      <li>zzzzzzzz</li>
     </ul>
   </div>
 </template>
@@ -28,5 +28,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
+li{
+  list-style-type: none;
+}
 </style>
