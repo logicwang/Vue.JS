@@ -1,11 +1,18 @@
 <template>
-  <div>
-    <h1>hoxxxxme</h1>
-    <p>f**k vue router</p>
+  <div id="app">
+    <!--可以定义不变的内容-->
+    <h3>{{title}}</h3>
+    <!--可以定义不变的内容-->
   </div>
 </template>
+
 <script>
-export default {
-  name:'home',
-};
+export default{
+    name:'app',
+    data(){
+        return{
+            title:'首页'
+        }
+    }
+}
 </script>

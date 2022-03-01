@@ -1,20 +1,24 @@
-import VueRouter from 'vue-router'
 import Vue from 'vue'
-import Home from '../components/Home.vue'
-import About from '../components/About.vue'
+import Router from 'vue-router'
+import About from '../components/About'
+import Good from '../components/Good'
+import Home from '../components/Home'
+import NotFound from '../components/NotFound'
+import User from '../components/User'
 
-Vue.use(VueRouter)
+export const routes = [
+    { path: '/', component: Home },
+    { path: '/about', component: About },
+    { path: '/good', component: Good },
+    { path: '/user/:id', component: User },
+    {
+        path: '*',
+        component: NotFound
+    }
+]
 
-const routes = [{
-    path: '/',
-    redirect: '/home',
-}]
+export const router = new Router({
+    routes // (缩写) 相当于 routes: routes
+});
 
-const router = new VueRouter({
-    routes,
-    // mode: 'history',
-    Home,
-    About
-})
-
-export default router
+Vue.use(Router);
