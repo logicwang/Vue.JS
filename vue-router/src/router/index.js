@@ -11,10 +11,7 @@ export const routes = [
     { path: '/about', component: About },
     { path: '/good', component: Good },
     { path: '/user/:id', component: User },
-    {
-        path: '*',
-        component: NotFound
-    }
+    { path: '*', component: NotFound }
 ]
 
 export const router = new Router({
