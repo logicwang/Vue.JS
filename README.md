@@ -1,9 +1,4 @@
 # 如何安装vue项目 #
-## 2022/02/25
-
-## 创建一个项目
-- [x] 学习vue-router(路由)
-
 [Vue CLI 官网](https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create)
 ## 2022/02/26
 
