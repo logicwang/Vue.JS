@@ -1,4 +1,4 @@
-<template>
+`<template>
   <div class="notfound">
       <div>
         <h1>404</h1>
