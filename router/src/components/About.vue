@@ -4,3 +4,9 @@
     <p>xxxx</p>
   </div>
 </template>
+<script>
+
+export default {
+name:'VueAbout'
+}
+</script>

@@ -10,14 +10,13 @@
     </div>
     <!--定义路由插座-->
     <router-view></router-view>
-
     <div class="footer">
       <p>
-        提供的内容仅用于培训和测试,不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。版权所有，保留一切权利。
+     aaawww
       </p>
       <div>
-        <a href="#">使用条款</a><a href="#">隐私条款</a>
-        <a href="#">沪ICP备000000号</a> <a href="#">技术支持:王宇飞</a>
+        <a href="#">wwwwwwwww</a><a href="#">ssssssss</a>
+        <a href="#">aaaa</a> <a href="#">xxx</a>
       </div>
     </div>
   </div>
