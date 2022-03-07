@@ -13,7 +13,10 @@
     <div class="footer">
       <p>aaawww</p>
       <div>
-        <a href="#">wwwwwwwww</a><a href="#">ssssssss</a> <a href="#">aaaa</a>
+       <router-link active-class="wyf" to="/good">aaaaaaaaa</router-link>
+       <router-view></router-view>
+        <a href="#">ssssssss</a> 
+        <a href="#">aaaa</a>
         <a href="#">xxx</a>
       </div>
     </div>

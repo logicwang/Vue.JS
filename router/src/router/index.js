@@ -7,6 +7,7 @@ import NotFound from '../components/NotFound'
 import User from '../components/User'
 import AboutRouter from '../components/AboutRouter'
 import GameRouter from '../components/GameRouter'
+import LoginName from '../components/LoginName'
 
 export const routes = [
     { path: '/', component: Home },
@@ -15,7 +16,8 @@ export const routes = [
     { path: '/user/:id', component: User },
     { path: '*', component: NotFound },
     { path: '/AboutRouter', component: AboutRouter },
-    { path: '/GameRouter', component: GameRouter }
+    { path: '/GameRouter', component: GameRouter },
+    { path: '/LoginName', component: LoginName }
 ]
 
 export const router = new Router({
