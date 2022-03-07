@@ -5,9 +5,9 @@ import Good from '../components/Good'
 import Home from '../components/Home'
 import NotFound from '../components/NotFound'
 import User from '../components/User'
-import AboutRouter from '../components/AboutRouter'
 import GameRouter from '../components/GameRouter'
-import LoginName from '../components/LoginName'
+
+
 
 export const routes = [
     { path: '/', component: Home },
@@ -15,9 +15,7 @@ export const routes = [
     { path: '/good', component: Good },
     { path: '/user/:id', component: User },
     { path: '*', component: NotFound },
-    { path: '/AboutRouter', component: AboutRouter },
-    { path: '/GameRouter', component: GameRouter },
-    { path: '/LoginName', component: LoginName }
+    { path: '/GameRouter', component: GameRouter }
 ]
 
 export const router = new Router({

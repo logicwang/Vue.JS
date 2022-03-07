@@ -3,8 +3,8 @@
     <div>路由实例</div>
     <div class="router">
       <router-link to="/GameRouter"><button>显示</button></router-link>
-      <router-link active-class="wyf" to="/good">好的</router-link>
-      <router-link active-class="wyf" to="/about">关于</router-link>
+      <router-link active-class="wyf" to="/good"><button>个人信息</button></router-link>
+      <router-link active-class="wyf" to="/about"><button>留言板</button></router-link>
       <router-link active-class="wyf" to="/user/1">鞋子</router-link>
       <router-link active-class="wyf" to="/user/2">帽子</router-link>
     </div>
@@ -13,8 +13,7 @@
     <div class="footer">
       <p>aaawww</p>
       <div>
-       <router-link active-class="wyf" to="/good">aaaaaaaaa</router-link>
-       <router-view></router-view>
+        <a href="#">wwwwwwwww</a>
         <a href="#">ssssssss</a> 
         <a href="#">aaaa</a>
         <a href="#">xxx</a>

@@ -1,5 +1,5 @@
 <template>  
-  <h3>游戏</h3>  
+  <h3>我嫩叠</h3>  
 </template>
 <script>
 export default {
