@@ -2,7 +2,6 @@
   <div class="warpper">
     <div>路由实例</div>
     <div class="router">
-      <h3>首页</h3>
       <router-link to="/GameRouter"><button>显示</button></router-link>
       <router-link active-class="wyf" to="/good">好的</router-link>
       <router-link active-class="wyf" to="/about">关于</router-link>
@@ -20,8 +19,7 @@
     </div>
   </div>
 </template>
-
-<style scoped>
+<style>
 .warpper {
   max-width: 980px;
   margin: 0 auto;
@@ -37,7 +35,6 @@
 }
 .router-link-exact-active {
   color: #fff;
-  background: #3f3f3f;
 }
 
 .footer {
