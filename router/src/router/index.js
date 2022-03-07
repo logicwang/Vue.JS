@@ -6,6 +6,7 @@ import Home from '../components/Home'
 import NotFound from '../components/NotFound'
 import User from '../components/User'
 import GameRouter from '../components/GameRouter'
+import Fotter from '../components/Fotter'
 
 
 
@@ -15,7 +16,8 @@ export const routes = [
     { path: '/good', component: Good },
     { path: '/user/:id', component: User },
     { path: '*', component: NotFound },
-    { path: '/GameRouter', component: GameRouter }
+    { path: '/GameRouter', component: GameRouter },
+    { path: '/Fotter', component: Fotter },
 ]
 
 export const router = new Router({
