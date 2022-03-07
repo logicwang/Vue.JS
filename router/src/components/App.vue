@@ -2,7 +2,8 @@
   <div class="warpper">
     <div>路由实例</div>
     <div class="router">
-      <router-link active-class="wyf" to="/">首页</router-link>
+      <h3>首页</h3>
+      <router-link to="/GameRouter"><button>显示</button></router-link>
       <router-link active-class="wyf" to="/good">好的</router-link>
       <router-link active-class="wyf" to="/about">关于</router-link>
       <router-link active-class="wyf" to="/user/1">鞋子</router-link>
@@ -11,12 +12,10 @@
     <!--定义路由插座-->
     <router-view></router-view>
     <div class="footer">
-      <p>
-     aaawww
-      </p>
+      <p>aaawww</p>
       <div>
-        <a href="#">wwwwwwwww</a><a href="#">ssssssss</a>
-        <a href="#">aaaa</a> <a href="#">xxx</a>
+        <a href="#">wwwwwwwww</a><a href="#">ssssssss</a> <a href="#">aaaa</a>
+        <a href="#">xxx</a>
       </div>
     </div>
   </div>

@@ -5,13 +5,17 @@ import Good from '../components/Good'
 import Home from '../components/Home'
 import NotFound from '../components/NotFound'
 import User from '../components/User'
+import AboutRouter from '../components/AboutRouter'
+import GameRouter from '../components/GameRouter'
 
 export const routes = [
     { path: '/', component: Home },
     { path: '/about', component: About },
     { path: '/good', component: Good },
     { path: '/user/:id', component: User },
-    { path: '*', component: NotFound }
+    { path: '*', component: NotFound },
+    { path: '/AboutRouter', component: AboutRouter },
+    { path: '/GameRouter', component: GameRouter }
 ]
 
 export const router = new Router({
