@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div >
     <img alt="Vue logo" src="./assets/logo.png">
   </div>
 </template>
@@ -12,8 +12,9 @@ export default {
   }
 }
 </script>
-<style scoped>
-div{
+
+<style>
+#app {
   text-align: center;
 }
 </style>
