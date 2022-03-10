@@ -2,10 +2,10 @@
   <div>
     <div class="history">
       <h1>主</h1>
+    <router-view></router-view>
       <button @click="handleSon1()">副组件</button>
       <button @click="handleSon2()">副组件2(参数)</button>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 <script>
