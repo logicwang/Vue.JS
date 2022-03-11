@@ -11,11 +11,11 @@ import Fotter from '../components/Fotter'
 
 
 export const routes = [
-    { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/good', component: Good },
-    { path: '/user/:id', component: User },
-    { path: '*', component: NotFound },
+    { path: '/', name: 'Home', component: Home },
+    { path: '/about', name: 'About', component: About },
+    { path: '/good', name: 'Good', component: Good },
+    { path: '/user/:id', name: 'User', component: User },
+    { path: '*', name: 'NotFound', component: NotFound },
     { path: '/GameRouter', component: GameRouter },
     { path: '/Fotter', component: Fotter },
 ]
