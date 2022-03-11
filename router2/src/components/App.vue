@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import GameRouter from "./history/history.vue";
+import GameRouter from "./history/HistoryApp.vue";
 export default {
   components: {
     "v-GameRouter": GameRouter,

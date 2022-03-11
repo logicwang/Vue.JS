@@ -7,19 +7,19 @@ export default new Router({
     routes: [{
             path: '/history',
             component: () =>
-                import ("@/components/history/history")
+                import ("@/components/history/HistoryApp")
         },
         {
             path: '/h_son1',
             name: 'son1',
             component: () =>
-                import ('@/components/history/history_son1')
+                import ('@/components/history/HistorySon1')
         },
         {
             path: '/h_son2',
             name: 'son2',
             component: () =>
-                import ('@/components/history/history_son2')
+                import ('@/components/history/HistorySon2')
         },
     ]
 })

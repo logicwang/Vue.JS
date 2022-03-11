@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './components/history/history'
+import App from './components/history/HistoryApp'
 import router from './router/index'
 
 
