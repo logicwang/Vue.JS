@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
+  <div>
     <img alt="Vue logo" src="./assets/logo.png">
+    <router-view name='mainheader'></router-view>
+    <router-view/>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ export default {
 </script>
 
 <style>
-#app {
+div {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
