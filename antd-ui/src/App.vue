@@ -2,16 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <Button></Button>
+    <Steps></Steps>
   </div>
 </template>
 
 <script>
 
 import  Button from './components/ButtonApp.vue'
+import  Steps from './components/StepsApp.vue'
 export default {
   name: "ButtonApp",
   components: {
-    Button
+    Button,
+    Steps
   },
 };
 </script>
