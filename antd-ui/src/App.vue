@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
+      <div>
+        <a-button type="primary">hello world</a-button>
+      </div>
     <!-- <Button></Button> -->
     <Steps></Steps>
   </div>
