@@ -1,12 +1,11 @@
   // src/main.js
   import Vue from 'vue'
   import { Button } from 'ant-design-vue';
-  import { Steps } from 'ant-design-vue';
   import 'ant-design-vue/dist/antd.css'
   import App from './App'
 
   Vue.component(Button.name, Button)
-  Vue.component(Steps.name, Steps)
+
 
   Vue.config.productionTip = false
 
