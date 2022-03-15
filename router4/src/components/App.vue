@@ -1,18 +1,16 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <router-view name='mainheader'></router-view>
-    <router-view/>
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <h1>Nested Named Views</h1>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-  components: {
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style>

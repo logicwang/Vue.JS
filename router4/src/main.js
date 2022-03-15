@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import App from './App.vue'
-import { router } from './router/index'
+import App from './components/App'
+import router from './router/index'
 
 new Vue({
     // el: '#app',
@@ -9,3 +9,6 @@ new Vue({
         return h(App);
     }
 }).$mount('#app')
+
+
+router.push('/settings/emails')
