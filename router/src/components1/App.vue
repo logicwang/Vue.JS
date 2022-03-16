@@ -11,12 +11,8 @@
       <router-link active-class="wyf" to="/about">
         <button>留言板</button>
       </router-link>
-      <router-link active-class="wyf" to="/about">
-        <button>博客</button>
-      </router-link>
-      <router-link active-class="wyf" to="/Good">
-        <button>XXX</button>
-      </router-link>
+      <router-link active-class="wyf" to="/user/1">鞋子</router-link>
+      <router-link active-class="wyf" to="/user/2">帽子</router-link>
     </div>
     <!--定义路由插座-->
     <router-view></router-view>
@@ -30,8 +26,7 @@
       <p>aaawww</p>
       <div>
         <a href="#">wwwwwwwww</a>
-
-        <router-view> <a href="/about"></a>ssssssss</router-view>
+        <a href="#">ssssssss</a>
         <a href="#">aaaa</a>
         <a href="#">xxx</a>
       </div>
@@ -40,7 +35,7 @@
 </template>
 <style>
 .warpper {
-  max-width: 980px;
+  max-width: 1980px;
   margin: 0 auto;
 }
 .router {
