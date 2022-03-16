@@ -20,8 +20,37 @@ export const routes = [
     { path: '/Fotter', component: Fotter },
 ]
 
+export default new Router({
+    routes: [{
+            path: '/history',
+            component: () =>
+                import ("@/components/history/HistoryApp")
+        },
+        {
+            path: '/h_son1',
+            name: 'son1',
+            component: () =>
+                import ('@/components/history/HistorySon1')
+        },
+        {
+            path: '/h_son2',
+            name: 'son2',
+            component: () =>
+                import ('@/components/history/HistorySon2')
+        },
+    ]
+})
+
 export const router = new Router({
     routes // (缩写) 相当于 routes: routes
 });
 
-Vue.use(Router);
+
+Vue.use(Router)
+
+
+
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+}
