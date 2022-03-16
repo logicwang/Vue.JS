@@ -23,7 +23,4 @@ export default {
 hr {
   border: 1px solid red;
 }
-div{
-  text-align: center;
-}
 </style>

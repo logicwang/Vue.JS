@@ -26,3 +26,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+div{
+  padding-left: 20px;
+}
+</style>
