@@ -1,4 +1,5 @@
 <template>
+<body>
   <div>
     <hr />
     <HistoryApp></HistoryApp>
@@ -8,6 +9,7 @@
     <One></One>
     <hr />
   </div>
+</body>
 </template>
 <script>
 import HistoryApp from "./components/history/HistoryApp.vue";
@@ -25,7 +27,10 @@ export default {
 </script>
 <style scoped>
 hr {
-  border: 5px solid red;
+  border-bottom: 5px solid red;
   border-radius: 10px;
+}
+body{
+  margin: 0;
 }
 </style>
