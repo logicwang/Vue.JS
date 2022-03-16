@@ -7,6 +7,7 @@ import NotFound from '../components/NotFound'
 import User from '../components/User'
 import GameRouter from '../components/GameRouter'
 import Fotter from '../components/Fotter'
+import HistoryApp from '../components/history/HistoryApp'
 
 
 
@@ -18,28 +19,10 @@ export const routes = [
     { path: '*', name: 'NotFound', component: NotFound },
     { path: '/GameRouter', component: GameRouter },
     { path: '/Fotter', component: Fotter },
+    { path: '/HistoryApp', component: HistoryApp },
 ]
 
-export default new Router({
-    routes: [{
-            path: '/history',
-            component: () =>
-                import ("@/components/history/HistoryApp")
-        },
-        {
-            path: '/h_son1',
-            name: 'son1',
-            component: () =>
-                import ('@/components/history/HistorySon1')
-        },
-        {
-            path: '/h_son2',
-            name: 'son2',
-            component: () =>
-                import ('@/components/history/HistorySon2')
-        },
-    ]
-})
+
 
 export const router = new Router({
     routes // (缩写) 相当于 routes: routes

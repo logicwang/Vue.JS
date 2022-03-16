@@ -1,18 +1,29 @@
 <template>
   <div>
     <hr />
-    <v-GameRouter></v-GameRouter>
-    <v-GameRouter></v-GameRouter>
+    <HistoryApp></HistoryApp>
+    <hr />
+    <App></App>
     <hr />
   </div>
 </template>
 <script>
+import HistoryApp from "./components/history/HistoryApp.vue";
 import App from "./components/App.vue";
-import GameRouter from "./components/history/HistoryApp.vue";
+
+
 export default {
   components: {
-    "v-App": App,
-    "v-GameRouter": GameRouter,
+    HistoryApp,
+    App,
   },
 };
 </script>
+<style scoped>
+hr {
+  border: 1px solid red;
+}
+div{
+  text-align: center;
+}
+</style>
