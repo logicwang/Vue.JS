@@ -1,6 +1,20 @@
 <template>
   <body>
     <div>
+      <div id="app">
+        <h1>Named Views</h1>
+        <ul>
+          <li>
+            <router-link to="/">/</router-link>
+          </li>
+          <li>
+            <router-link to="/other">/other</router-link>
+          </li>
+        </ul>
+        <router-view class="view one"></router-view>
+        <router-view class="view two" name="a"></router-view>
+        <router-view class="view three" name="b"></router-view>
+      </div>
       <hr />
       <HistoryApp></HistoryApp>
       <hr />
