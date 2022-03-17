@@ -7,6 +7,9 @@ import NotFound from '../components/NotFound'
 import User from '../components/User'
 import GameRouter from '../components/GameRouter'
 import Fotter from '../components/Fotter'
+import Foo from '../components2/Foo'
+import Bar from '../components2/Bar'
+import Baz from '../components2/Baz'
 import HistoryApp from '../components/history/HistoryApp'
 
 
@@ -20,18 +23,15 @@ export const routes = [
     { path: '/GameRouter', component: GameRouter },
     { path: '/Fotter', component: Fotter },
     { path: '/HistoryApp', component: HistoryApp },
+    { path: '/', components: { default: Foo, a: Bar, b: Baz } }
 ]
-
 
 
 export const router = new Router({
     routes // (缩写) 相当于 routes: routes
 });
 
-
 Vue.use(Router)
-
-
 
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
