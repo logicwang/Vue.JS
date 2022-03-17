@@ -5,12 +5,6 @@ import Good from '../components/Good'
 import Home from '../components/Home'
 import NotFound from '../components/NotFound'
 import User from '../components/User'
-import GameRouter from '../components/GameRouter'
-import Fotter from '../components/Fotter'
-import Foo from '../components2/Foo'
-import Bar from '../components2/Bar'
-import Baz from '../components2/Baz'
-import HistoryApp from '../components/history/HistoryApp'
 
 
 
@@ -20,10 +14,6 @@ export const routes = [
     { path: '/good', name: 'Good', component: Good },
     { path: '/user/:id', name: 'User', component: User },
     { path: '*', name: 'NotFound', component: NotFound },
-    { path: '/GameRouter', component: GameRouter },
-    { path: '/Fotter', component: Fotter },
-    { path: '/HistoryApp', component: HistoryApp },
-    { path: '/', components: { default: Foo, a: Bar, b: Baz } }
 ]
 
 

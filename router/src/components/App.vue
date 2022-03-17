@@ -1,6 +1,5 @@
 <template>
   <div class="warpper">
-    <div>路由实例</div>
     <div class="router">
       <router-link to="/GameRouter">
         <button>显示</button>
@@ -17,7 +16,7 @@
     <!--定义路由插座-->
     <router-view></router-view>
     <div>
-      <router-link to="/Fotter">
+      <router-link to="/Fotter">  
         <button>显示</button>
       </router-link>
       <router-view></router-view>

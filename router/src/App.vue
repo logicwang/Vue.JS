@@ -1,41 +1,14 @@
 <template>
-  <body>
-    <div>
-      <div id="app">
-        <h1>Named Views</h1>
-        <ul>
-          <li>
-            <router-link to="/">/</router-link>
-          </li>
-          <li>
-            <router-link to="/other">/other</router-link>
-          </li>
-        </ul>
-      </div>
-      <hr />
-      <HistoryApp></HistoryApp>
-      <hr />
-      <App></App>
-      <hr />
-      <One></One>
-      <hr />
-      <View></View>
-      <router-view></router-view>
-    </div>
-  </body>
+  <div>
+    <App></App>
+  </div>
 </template>
 <script>
-import HistoryApp from "./components/history/HistoryApp.vue";
 import App from "./components/App.vue";
-import One from "./components1/App.vue";
-import View from "./components2/ViewApp.vue";
 
 export default {
   components: {
-    HistoryApp,
     App,
-    One,
-    View,
   },
 };
 </script>
