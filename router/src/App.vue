@@ -11,9 +11,6 @@
             <router-link to="/other">/other</router-link>
           </li>
         </ul>
-        <router-view class="view one"></router-view>
-        <router-view class="view two" name="a"></router-view>
-        <router-view class="view three" name="b"></router-view>
       </div>
       <hr />
       <HistoryApp></HistoryApp>
@@ -23,6 +20,7 @@
       <One></One>
       <hr />
       <View></View>
+      <router-view></router-view>
     </div>
   </body>
 </template>

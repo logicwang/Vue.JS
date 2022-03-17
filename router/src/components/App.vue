@@ -25,7 +25,7 @@
     <div class="footer">
       <p>aaawww</p>
       <div>
-        <a href="#">wwwwwwwww</a>
+        <a href="#">wang</a>
         <a href="#">ssssssss</a>
         <a href="#">aaaa</a>
         <a href="#">xxx</a>
