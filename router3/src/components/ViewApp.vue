@@ -14,6 +14,7 @@
           <router-link :to="{ name: '/Bar' }"><button>Bar</button></router-link>
         </li>
       </ul>
+      <router-view></router-view>
       <!-- <FooApp></FooApp>
       <BazApp></BazApp>
       <BarApp></BarApp> -->
