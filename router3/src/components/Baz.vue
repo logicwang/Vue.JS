@@ -1,6 +1,6 @@
 <template>
 <div>
-    <p>上海市民王先生</p>
+    <p>aaa</p>
 </div>  
 </template>
 

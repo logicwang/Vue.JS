@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <ViewApp msg="Welcome to Your Vue.js App"/>
+    <!-- <ViewApp msg="Welcome to Your Vue.js App"/> -->
+    <ViewApp></ViewApp>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ export default {
     ViewApp
   }
 }
+
 </script>
 
 <style>
