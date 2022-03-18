@@ -7,16 +7,11 @@
         <li>
           <router-link :to="{ name: '/Baz' }"><button>Baz</button></router-link>
         </li>
-
         <li>
           <router-link :to="{ name: '/Foo' }"><button>Foo</button></router-link>
         </li>
-      <router-view></router-view>
         <li>
-          <router-link to="{ name: '/Bar', params: { id: 123 } }"
-            ><button>bar</button></router-link
-          >
-
+          <router-link :to="{ name: '/Bar' }"><button>Bar</button></router-link>
         </li>
       </ul>
       <!-- <FooApp></FooApp>
@@ -37,3 +32,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+li {
+  list-style-type: none;
+}
+</style>
