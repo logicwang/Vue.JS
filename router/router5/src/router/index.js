@@ -49,7 +49,7 @@ export const routes = [{
         component: Home
     },
     {
-        path: '/Home',
+        path: '/home',
         component: Home,
         alias: '/Login'
     }
