@@ -1,16 +1,23 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '../components/HelloWorld'
+import Vue from "vue";
+import Router from "vue-router";
 
 
+const UserApp = () =>
+    import ("@/components/UserApp")
 
-export const routes = [
-    { path: '/', name: 'HelloWorld', component: HelloWorld },
-]
+
+export default new Router({
+    routes: [{
+        path: "/UserApp/:id",
+        name: "UserApp",
+        component: UserApp,
+        props: 111
+    }]
+});
 
 
 export const router = new Router({
-    routes // (缩写) 相当于 routes: routes
+    Router // (缩写) 相当于 routes: routes
 });
 
 Vue.use(Router)
