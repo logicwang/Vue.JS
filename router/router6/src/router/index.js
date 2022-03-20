@@ -1,31 +1,18 @@
 import Vue from "vue";
 import Router from "vue-router";
-import NewsApp from "@/components/NewsApp";
-
 
 const UserApp = () =>
     import ("@/components/UserApp")
 
-const HomeApp = () =>
-    import ("@/components/HomeApp")
 
 
 export default new Router({
     routes: [{
-            path: "/UserApp/:id",
-            name: "UserApp",
-            component: UserApp,
-            props: 111
-        },
-        {
-            path: "/HomeApp/:id",
-            name: "HomeApp",
-            component: HomeApp,
-            props: 222
-        },
-        { path: '/NewsApp', name: 'NewsApp', component: NewsApp },
-
-    ]
+        path: '/UserApp/:id',
+        name: "UserApp",
+        component: UserApp,
+        props: 111
+    }, ]
 });
 
 
