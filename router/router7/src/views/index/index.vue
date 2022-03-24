@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	import FooterNav from '../../components/footer.vue'
+	import FooterNav from '../../components/Fotter.vue'
 	export default{
 		name:'IndexApp',
 		components: {

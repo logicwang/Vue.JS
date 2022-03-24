@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from './views/index'
-import Manage from './views/manage/Manage'
+import Manage from './views/manage/index'
 
 Vue.use(Router)
 
