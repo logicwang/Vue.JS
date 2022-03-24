@@ -8,6 +8,7 @@
 <script>
 	import FooterNav from '../../components/footer.vue'
 	export default{
+		name:'IndexApp',
 		components: {
 			FooterNav
 		},
