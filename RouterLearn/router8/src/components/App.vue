@@ -5,17 +5,17 @@
       <router-link to="/index">首页</router-link>
       <router-link to="/news">新闻</router-link>
       <router-link to="/friend">朋友圈</router-link>
-      <IndexApp />
+      <IndexApp/>
     </div>
   </div>
 </template>
 
 <script>
-import IndexApp from "./index.vue";
+import IndexApp from './index.vue'
 export default {
   name: "App",
   components: {
-    IndexApp,
+    IndexApp
   },
 };
 </script>

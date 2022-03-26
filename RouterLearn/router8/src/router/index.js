@@ -8,16 +8,36 @@ import login from '../components/index/login'
 import register from '../components/index/register'
 
 
-
 export const routes = [
-    { path: '/', name: 'index', component: index },
-    { path: '/friend', name: 'friend', component: friend },
-    { path: '/news', name: 'news', component: news },
-    { path: '/index/login', name: 'login', component: login },
-    { path: '/HomePage', name: 'HomePage', component: HomePage },
-    { path: '/index/register', component: register }
-    // { path: '/user/:id', name: 'User', component: User },
-    // { path: '*', name: 'NotFound', component: NotFound },
+
+    {
+        path: '/',
+        name: 'index',
+        component: index
+    },
+    {
+        path: '/friend',
+        name: 'friend',
+        component: friend
+    },
+    {
+        path: '/news',
+        name: 'news',
+        component: news
+    },
+    {
+        path: '/index/login',
+        name: 'login',
+        component: login
+    },
+    {
+        path: '/index/register',
+        component: register
+    },
+    {
+        path: '/HomePage',
+        component: HomePage
+    },
 ]
 
 export const router = new Router({
