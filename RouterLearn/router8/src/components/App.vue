@@ -5,19 +5,17 @@
       <router-link to="/index">首页</router-link>
       <router-link to="/news">新闻</router-link>
       <router-link to="/friend">朋友圈</router-link>
-      <router-view></router-view>
-      <!-- <HelloWorld/> -->
+      <IndexApp />
     </div>
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./HelloWorld.vue";
-
+import IndexApp from "./index.vue";
 export default {
   name: "App",
   components: {
-    // HelloWorld,
+    IndexApp,
   },
 };
 </script>
