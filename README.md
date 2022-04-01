@@ -1,4 +1,4 @@
-# 如何安装vue项目
+# 如何安装vue项目 
 [Vue CLI 官网](https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create)
 ## 2022/02/26
 
