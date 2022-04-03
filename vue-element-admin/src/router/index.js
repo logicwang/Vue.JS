@@ -381,7 +381,7 @@ export const asyncRoutes = [{
             component: () =>
                 import ('@/views/weibo/index'),
             name: 'Name',
-            meta: { title: 'weibo', icon: 'weibo' }
+            meta: { title: '微博', icon: 'weibo' }
         }]
     },
 
