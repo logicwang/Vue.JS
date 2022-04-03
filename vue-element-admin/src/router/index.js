@@ -373,6 +373,15 @@ export const asyncRoutes = [{
                 import ('@/views/name/index'),
             name: 'Name',
             meta: { title: 'Mac', icon: 'Mac' }
+        }],
+        path: '/weibo',
+        component: Layout,
+        children: [{
+            path: 'index',
+            component: () =>
+                import ('@/views/weibo/index'),
+            name: 'Name',
+            meta: { title: 'weibo', icon: 'weibo' }
         }]
     },
 
