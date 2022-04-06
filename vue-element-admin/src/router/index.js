@@ -367,6 +367,18 @@ export const asyncRoutes = [{
     },
 
     {
+        path: '/zhihu',
+        component: Layout,
+        children: [{
+            path: 'index',
+            component: () =>
+                import ('@/views/name/index'),
+            name: 'zhihu',
+            meta: { title: 'zhihu', icon: 'zhihu' }
+        }]
+    },
+
+    {
         path: '/clipboard',
         component: Layout,
         children: [{
