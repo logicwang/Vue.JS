@@ -1,10 +1,7 @@
 <template>
   <div>
     <button onclick="openUrl();">Click here</button>
-
-    <a href="https://www.zhihu.com/" target="_blank"
-      ><button>Click here</button></a
-    >
+    <a href="https://www.zhihu.com/" target="_blank"><button>Click here</button></a>
   </div>
 </template>
 <script type="text/javascript">
