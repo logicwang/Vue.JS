@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index-btn">
     <button onclick="openUrl();">Click here</button>
     <a href="https://www.zhihu.com/" target="_blank"><button>Click here</button></a>
   </div>
@@ -11,3 +11,11 @@ openUrl = function (id) {
   window.location.href = url; //当前窗口打开
 };
 </script>
+<style scoped>
+button{
+    margin-right:20px ;
+}
+.index-btn{
+    margin: 35px;
+}
+</style>
