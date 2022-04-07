@@ -368,16 +368,25 @@ export const asyncRoutes = [{
 
     {
         path: '/zhihu',
-        component: Layout,
         children: [{
-            path: 'index',
+            path: 'zhihu',
             component: () =>
-                import ('@/views/name/index'),
+                import ('@/views/zhihu/index'),
             name: 'zhihu',
             meta: { title: 'zhihu', icon: 'zhihu' }
         }]
     },
 
+    {
+        path: '/jianli',
+        children: [{
+            path: 'jianli',
+            component: () =>
+                import ('@/views/jianli/index'),
+            name: 'zhihu',
+            meta: { title: 'jianli', icon: 'jianli' }
+        }]
+    },
     {
         path: '/clipboard',
         component: Layout,
