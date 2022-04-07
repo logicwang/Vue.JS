@@ -6,7 +6,7 @@
 </template>
 <script type="text/javascript">
 openUrl = function (id) {
-  var url = "https://www.zhihu.com/";
+  var url = "https://www.baidu.com/";
   window.open(url); //新窗口打开
   window.location.href = url; //当前窗口打开
 };
