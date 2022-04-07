@@ -383,7 +383,7 @@ export const asyncRoutes = [{
             path: 'jianli',
             component: () =>
                 import ('@/views/jianli/index'),
-            name: 'zhihu',
+            name: 'jianli',
             meta: { title: 'jianli', icon: 'jianli' }
         }]
     },
