@@ -18,7 +18,7 @@
           label="地址"
         ></el-table-column>
       </el-table>
-      <el-button slot="reference">click 激活</el-button>
+      <el-button slot="reference">点击查看内容</el-button>
     </el-popover>
   </div>
 </template>
@@ -38,25 +38,8 @@ export default {
           name: "王小虎",
           address: "上海市普陀区金沙江路 1518 弄",
         },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
       ],
     };
   },
 };
 </script>
-<style scoped>
-.popover{
-  text-align: center;
-  position: relative;
-  right: 20px;
-}
-</style>

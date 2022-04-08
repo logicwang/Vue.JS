@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import ShowModal from './components/ShowModal.vue'
+import HelloWorld from './components/Springframe/HelloWorld.vue'
+import ShowModal from './components/Springframe/ShowModal.vue'
 
 export default {
   name: 'App',
