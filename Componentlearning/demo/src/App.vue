@@ -1,25 +1,29 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld/>
     <hr/>
     <ShowModal/>
     <hr/>
     <TextApp/>
     <hr/>
+    <PoPover/>
+    <hr/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/Springframe/HelloWorld.vue'
-import ShowModal from './components/Springframe/ShowModal.vue'
-import TextApp from './components/Springframe/TextApp.vue'
+import HelloWorld from './components/Popover/HelloWorld.vue'
+import ShowModal from './components/Popover/ShowModal.vue'
+import TextApp from './components/Popover/TextApp.vue'
+import PoPover from './components/Popover/PoPover.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     ShowModal,
-    TextApp
+    TextApp,
+    PoPover
   }
 }
 </script>
@@ -31,7 +35,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 hr{
   border: 2px solid pink;
