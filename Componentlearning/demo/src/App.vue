@@ -3,19 +3,24 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <hr/>
-    <ShowModal msg="AAAAAAA"/>
+    <ShowModal/>
+    <hr/>
+    <TextApp/>
+    <hr/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/Springframe/HelloWorld.vue'
 import ShowModal from './components/Springframe/ShowModal.vue'
+import TextApp from './components/Springframe/TextApp.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    ShowModal
+    ShowModal,
+    TextApp
   }
 }
 </script>
