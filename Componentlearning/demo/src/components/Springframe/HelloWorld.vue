@@ -18,7 +18,7 @@
           label="地址"
         ></el-table-column>
       </el-table>
-      <el-button slot="reference">点击查看内容</el-button>
+      <el-button slot="reference" type="text" @click="dialogVisible = true">查看内容</el-button>
     </el-popover>
   </div>
 </template>
