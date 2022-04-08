@@ -8,6 +8,8 @@
     <hr/>
     <PoPover/>
     <hr/>
+    <Dialog/>
+    <hr/>
   </div>
 </template>
 
@@ -16,6 +18,7 @@ import HelloWorld from './components/Popover/HelloWorld.vue'
 import ShowModal from './components/Popover/ShowModal.vue'
 import TextApp from './components/Popover/TextApp.vue'
 import PoPover from './components/Popover/PoPover.vue'
+import Dialog from './components/Popover/Dialog.vue'
 
 export default {
   name: 'App',
@@ -23,7 +26,8 @@ export default {
     HelloWorld,
     ShowModal,
     TextApp,
-    PoPover
+    PoPover,
+    Dialog
   }
 }
 </script>
