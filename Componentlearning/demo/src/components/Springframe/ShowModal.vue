@@ -4,7 +4,6 @@
       class="filter-item"
       style="margin-left: 10px;"
       type="primary"
-      icon="el-icon-edit"
       @click="handleCreate"
     >添加</el-button>
     <el-dialog :visible.sync="dialogFormVisible">
@@ -121,4 +120,3 @@ export default {
 };
 </script>
 <style scoped>
-</style>
