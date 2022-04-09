@@ -12,6 +12,7 @@
     <hr />
     <DialogFooter />
     <hr />
+    <FoterApp/>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import TextApp from "./components/Popover/TextApp.vue";
 import PoPover from "./components/Popover/PoPover.vue";
 import Dialog from "./components/Popover/Dialog.vue";
 import DialogFooter from "./components/Popover/DialogFooter.vue";
+import FoterApp from "./components/Popover/FoterApp.vue";
 
 export default {
   name: "App",
@@ -32,6 +34,7 @@ export default {
     PoPover,
     Dialog,
     DialogFooter,
+    FoterApp
   },
 };
 </script>
