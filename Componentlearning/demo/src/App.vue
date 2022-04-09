@@ -1,35 +1,39 @@
 <template>
   <div id="app">
-    <HelloWorld/>
-    <hr/>
-    <ShowModal/>
-    <hr/>
-    <TextApp/>
-    <hr/>
-    <PoPover/>
-    <hr/>
-    <Dialog/>
-    <hr/>
+    <HelloWorld />
+    <hr />
+    <ShowModal />
+    <hr />
+    <TextApp />
+    <hr />
+    <PoPover />
+    <hr />
+    <Dialog />
+    <hr />
+    <DialogFooter />
+    <hr />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/Popover/HelloWorld.vue'
-import ShowModal from './components/Popover/ShowModal.vue'
-import TextApp from './components/Popover/TextApp.vue'
-import PoPover from './components/Popover/PoPover.vue'
-import Dialog from './components/Popover/Dialog.vue'
+import HelloWorld from "./components/Popover/HelloWorld.vue";
+import ShowModal from "./components/Popover/ShowModal.vue";
+import TextApp from "./components/Popover/TextApp.vue";
+import PoPover from "./components/Popover/PoPover.vue";
+import Dialog from "./components/Popover/Dialog.vue";
+import DialogFooter from "./components/Popover/DialogFooter.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld,
     ShowModal,
     TextApp,
     PoPover,
-    Dialog
-  }
-}
+    Dialog,
+    DialogFooter,
+  },
+};
 </script>
 
 <style>
@@ -40,7 +44,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-hr{
+hr {
   border: 2px solid pink;
 }
 </style>
