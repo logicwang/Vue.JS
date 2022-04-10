@@ -2,7 +2,10 @@ import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
-import 'default-passive-events'
+import { axios } from 'axios'
+import 'default-passive-events';
+
+Vue.prototype.$axios = axios
 
 Vue.use(ElementUI);
 
