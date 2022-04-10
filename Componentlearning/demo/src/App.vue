@@ -16,6 +16,7 @@
     <hr />
     <KeeopLine/>
     <hr />
+    <TextName/>
   </div>
 </template>
 
@@ -28,6 +29,7 @@ import Dialog from "./components/Popover/Dialog.vue";
 import DialogFooter from "./components/Popover/DialogFooter.vue";
 import FoterApp from "./components/Popover/FoterApp.vue";
 import KeeopLine from "./components/Popover/KeeopLine.vue";
+import TextName from "./components/Popover/TextName.vue";
 
 export default {
   name: "App",
@@ -39,7 +41,8 @@ export default {
     Dialog,
     DialogFooter,
     FoterApp,
-    KeeopLine
+    KeeopLine,
+    TextName
   },
 };
 </script>
