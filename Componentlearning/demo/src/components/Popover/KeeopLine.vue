@@ -76,7 +76,7 @@ export default {
     */
     add () {
       if (this.linkData.length >= 100) {
-        this.$message.error('最多添加5个链接')
+        this.$message.error('最多添加100个链接')
         return
       }
       this.linkData.push({ linkName: '', href: '' })
