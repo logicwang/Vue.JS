@@ -17,6 +17,7 @@
     <KeeopLine/>
     <hr />
     <TextName/>
+     <hr />
   </div>
 </template>
 
