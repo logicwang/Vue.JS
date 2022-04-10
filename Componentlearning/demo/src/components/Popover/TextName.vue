@@ -28,7 +28,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
 ul {
   list-style-type: none;
 }
