@@ -7,8 +7,9 @@
     import LayOut from './components/view/LayOut'
 
 export default {
-    comments:{
-        LayOut
-    }
-}
+  name: "App",
+  components: {
+    LayOut
+  },
+};
 </script>
