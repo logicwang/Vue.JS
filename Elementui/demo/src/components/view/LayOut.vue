@@ -1,25 +1,52 @@
 <template>
   <div>
     <el-row>
-      <el-col :span="24"
-        ><div class="grid-content bg-purple-dark"></div
-      ></el-col>
+      <el-col :span="24">
+        <div class="grid-content bg-purple-dark">
+          <h1>aaaaaaa</h1>
+          <p>assssssss</p>
+        </div>
+      </el-col>
     </el-row>
     <el-row>
-      <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="12"
-        ><div class="grid-content bg-purple-light"></div
-      ></el-col>
+      <el-col :span="12">
+        <div class="grid-content bg-purple">
+          <h1>aaaaaaa</h1>
+          <p>assssssss</p>
+        </div>
+      </el-col>
+      <el-col :span="12">
+        <div class="grid-content bg-purple-light">
+          <h1>aaaaaaa</h1>
+          <p>assssssss</p>
+        </div>
+      </el-col>
     </el-row>
     <el-row>
-      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="8"
-        ><div class="grid-content bg-purple-light"></div
-      ></el-col>
-      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="8">
+        <div class="grid-content bg-purple">
+          <h1>aaaaaaa</h1>
+          <p>assssssss</p>
+        </div>
+      </el-col>
+      <el-col :span="8">
+        <div class="grid-content bg-purple-light">
+          <h1>aaaaaaa</h1>
+          <p>assssssss</p>
+        </div>
+      </el-col>
+      <el-col :span="8"><div class="grid-content bg-purple">
+          <h1>aaaaaaa</h1>
+          <p>assssssss</p>
+        </div></el-col
+      >
     </el-row>
     <el-row>
-      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple">
+          <h1>aaaaaa</h1>
+          <p>ssssssss</p>
+        </div>
+      </el-col>
       <el-col :span="6"
         ><div class="grid-content bg-purple-light"></div
       ></el-col>
@@ -29,10 +56,19 @@
       ></el-col>
     </el-row>
     <el-row>
-      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="4"
-        ><div class="grid-content bg-purple-light"></div
-      ></el-col>
+      <el-col :span="4">
+        <div class="grid-content bg-purple">
+          <h1>aaaaaaa</h1>
+          <p>assssssss</p>
+        </div>
+      </el-col>
+      <el-col :span="4">
+        <div class="grid-content bg-purple-light">
+          <h1>aaaaaaa</h1>
+          <span>asdasdas</span>
+          <p>assssssss</p>
+        </div>
+      </el-col>
       <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
       <el-col :span="4"
         ><div class="grid-content bg-purple-light"></div
@@ -45,7 +81,7 @@
   </div>
 </template>
 
-<style lang="scss"> 
+<style lang="scss">
 .el-row {
   margin-bottom: 20px;
   &:last-child {
@@ -71,5 +107,9 @@
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
+}
+.bg-purple-dark {
+  display: flex;
+  justify-content: space-around;
 }
 </style>
