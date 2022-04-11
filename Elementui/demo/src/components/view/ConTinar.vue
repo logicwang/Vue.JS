@@ -28,8 +28,7 @@ export default {};
 <style lang="scss">
 .name {
   .plan-btn {
-    padding: 8px 12px;
-    margin-left: 20px;
+    padding: 12px 12px;
   }
 }
 </style>
