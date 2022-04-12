@@ -1,4 +1,4 @@
-# demo
+# uidemo
 
 ## Project setup
 ```
