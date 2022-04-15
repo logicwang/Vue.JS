@@ -1,93 +1,134 @@
 <template>
 <div>
     <el-table
-    ref="multipleTable"
     :data="tableData"
-    tooltip-effect="dark"
-    style="width: 100%;size:20px;"
-    @selection-change="handleSelectionChange">
+    border
+    show-summary
+    style="width: 100%">
     <el-table-column
-      type="selection"
-      stripe="true"
-      width="55">
-    </el-table-column>
-    <el-table-column
-      label="日期"
-      width="120">
-      <template slot-scope="scope">{{ scope.row.date }}</template>
+      prop="id"
+      label="ID"
+      width="180">
     </el-table-column>
     <el-table-column
       prop="name"
-      label="姓名"
-      width="120">
+      highlight-current-row="boolean"
+      show-overflow-tooltip
+      label="姓名">
     </el-table-column>
     <el-table-column
-      prop="address"
-      label="地址"
-      style="width:20%"
-      show-overflow-tooltip>
+      prop="amount1"
+      sortable
+      label="数值 1">
+    </el-table-column>
+    <el-table-column
+      prop="amount2"
+      sortable
+      label="数值 2">
+    </el-table-column>
+    <el-table-column
+      prop="amount3"
+      sortable
+      label="数值 3">
     </el-table-column>
   </el-table>
-  <div style="margin-top: 20px">
-    <el-button @click="toggleSelection([tableData[1], tableData[2]])">切换第二、第三行的选中状态</el-button>
-    <el-button @click="toggleSelection()">取消选择</el-button>
-  </div>
+
+  <el-table
+    :data="tableData"
+    border
+    height="200"
+    :summary-method="getSummaries"
+    show-summary
+    style="width: 100%; margin-top: 20px">
+    <el-table-column
+      prop="id"
+      label="ID"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="姓名">
+    </el-table-column>
+    <el-table-column
+      prop="amount1"
+      label="数值 1（元）">
+    </el-table-column>
+    <el-table-column
+      prop="amount2"
+      label="数值 2（元）">
+    </el-table-column>
+    <el-table-column
+      prop="amount3"
+      label="数值 3（元）">
+    </el-table-column>
+  </el-table>
 </div>
 </template>
 
 <script>
-export default {
+  export default {
     data() {
       return {
         tableData: [{
-          date: '2016-05-03',
-         name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄'
+          id: '12987122',
+          name: '王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎',
+          amount1: '234',
+          amount2: '3.2',
+          amount3: 10
         }, {
-          date: '2016-05-02',
+          id: '12987123',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          amount1: '165',
+          amount2: '4.43',
+          amount3: 12
         }, {
-          date: '2016-05-04',
+          id: '12987124',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          amount1: '324',
+          amount2: '1.9',
+          amount3: 9
         }, {
-          date: '2016-05-01',
+          id: '12987125',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          amount1: '621',
+          amount2: '2.2',
+          amount3: 17
         }, {
-          date: '2016-05-08',
+          id: '12987126',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-06',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-07',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }],
-        multipleSelection: []
-      }
+          amount1: '539',
+          amount2: '4.1',
+          amount3: 15
+        }]
+      };
     },
-
     methods: {
-      toggleSelection(rows) {
-        if (rows) {
-          rows.forEach(row => {
-            this.$refs.multipleTable.toggleRowSelection(row);
-          });
-        } else {
-          this.$refs.multipleTable.clearSelection();
-        }
-      },
-      handleSelectionChange(val) {
-        this.multipleSelection = val;
+      getSummaries(param) {
+        const { columns, data } = param;
+        const sums = [];
+        columns.forEach((column, index) => {
+          if (index === 0) {
+            sums[index] = '总价';
+            return;
+          }
+          const values = data.map(item => Number(item[column.property]));
+          if (!values.every(value => isNaN(value))) {
+            sums[index] = values.reduce((prev, curr) => {
+              const value = Number(curr);
+              if (!isNaN(value)) {
+                return prev + curr;
+              } else {
+                return prev;
+              }
+            }, 0);
+            sums[index] += ' 元';
+          } else {
+            sums[index] = 'N/A';
+          }
+        });
+
+        return sums;
       }
     }
-  }
+  };
 </script>
-
-<style>
-</style>
