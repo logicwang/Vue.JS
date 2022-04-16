@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <HelloWorld/>
+    <WhileApp/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import WhileApp from './components/WhileApp.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    WhileApp
   }
 }
 </script>
