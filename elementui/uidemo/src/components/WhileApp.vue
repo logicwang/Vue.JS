@@ -49,4 +49,8 @@ export default {
   },
 };
 </script>
-
+<style lang="scss" scoped>
+li{
+  list-style: none;
+}
+</style>
