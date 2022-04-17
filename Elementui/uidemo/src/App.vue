@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <HelloWorld/>
-    <!-- <WhileApp/> -->
+    <hr/>
+    <WhileApp/>
+    <hr/>
     <CallApp/>
+    <hr/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-// import WhileApp from './components/WhileApp.vue'
+import WhileApp from './components/WhileApp.vue'
 import CallApp from './components/CallApp.vue'
 
 
@@ -16,7 +19,7 @@ export default {
   name: 'app',
   components: {
     HelloWorld,
-    // WhileApp,
+    WhileApp,
     CallApp
   }
 }
