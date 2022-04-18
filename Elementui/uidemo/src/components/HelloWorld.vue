@@ -2,49 +2,21 @@
 <template>
   <div class="page-item page-callrecords">
     <div class="page-content" ref="pageTab">
+      <h1>列表的增删改查</h1>
       <div class="page-tab">
-        <el-form
-          :model="selectForm"
-          ref="selectForm"
-          label-width="80px"
-          class="form"
-        >
+        <el-form :model="selectForm" ref="selectForm" label-width="80px" class="form">
           <el-form-item label="姓名：" class="form-item">
-            <el-input
-              v-model="selectForm.name"
-              placeholder="请输入姓名"
-            ></el-input>
+            <el-input v-model="selectForm.name" placeholder="请输入姓名" style="    display: flex;"></el-input>
           </el-form-item>
-          <el-form-item label="电话：" class="form-item style">
-            <el-input
-              v-model="selectForm.phone"
-              placeholder="请输入电话1或电话2"
-            ></el-input>
+          <el-form-item label="电话：" class="form-item">
+            <el-input v-model="selectForm.phone" placeholder="请输入电话1或电话2" style="        width: 50%;
+    float: left;display: flex;"></el-input>
           </el-form-item>
-          <div class="clear"></div>
-          <!-- 
-          <el-form-item label="分类" class="form-item">
-            <el-select v-model="form.classify" placeholder="选择" class="form-item">
-              <el-option label="分类一" value="shanghai"></el-option>
-              <el-option label="分类二" value="beijing"></el-option>
-            </el-select>
-          </el-form-item> -->
-          <el-form-item>
-            <el-button
-              type="primary"
-              icon="el-icon-search"
-              class="form-btn btn-style right"
-              @click="onSelect()"
-              >搜索</el-button
-            >
-          </el-form-item>
-          <el-button
-            type="primary"
-            icon="el-icon-plus"
-            class="form-btn right"
-            @click="onAddRow()"
-            >添加</el-button
-          >
+        <div class="el-btn">
+          <el-button type="primary" icon="el-icon-plus" class="form-btn right" @click="onAddRow()" style="position: relative;
+    left: 111px;">添加</el-button>
+          <el-button type="primary" icon="el-icon-search" class="form-btn  weizhi-bnt" @click="onSelect()">搜索</el-button>
+        </div>
         </el-form>
         <!-- 表格试视图 v-if="cutLayout"-->
         <el-table
@@ -746,20 +718,23 @@ export default {
   background-color: #409eff;
   border-color: #409eff;
 }
-.style {
-  width: 48%;
-  float: left;
+.el-input {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    width: 50%;
 
 }
-.clear {
-  clear: both;
-}
-  .btn-style{
-        /* margin-left: 80px; */
-    width: 10%;
+    .el-btn{
+          width: 21%;
     float: right;
+    margin: 0;
     position: relative;
-    bottom: 63px;
-    right: 400px;
-  }
+    bottom: 125px;
+    }
+    .weizhi-bnt{
+          position: relative;
+    top: 62px;
+    left: 14px;
+    }
 </style>
