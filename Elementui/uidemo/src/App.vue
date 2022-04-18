@@ -5,8 +5,6 @@
     <CallApp />
     <hr />
     <!-- <WhileApp /> -->
-    <meta charset="UTF-8" />
-    <title></title>
   </div>
 </template>
 
