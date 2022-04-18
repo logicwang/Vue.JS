@@ -207,7 +207,7 @@ export default {
       this.dialogVisible = false;
     },
 
-    confirm(Vue) {
+    confirm :function(Vue) {
       this.dialogVisible = false;
       Vue.set(this.tableData, this.userIndex, this.editObj);
     },

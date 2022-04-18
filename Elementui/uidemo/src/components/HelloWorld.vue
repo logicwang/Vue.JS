@@ -15,12 +15,13 @@
               placeholder="请输入姓名"
             ></el-input>
           </el-form-item>
-          <el-form-item label="电话：" class="form-item">
+          <el-form-item label="电话：" class="form-item style">
             <el-input
               v-model="selectForm.phone"
               placeholder="请输入电话1或电话2"
             ></el-input>
           </el-form-item>
+          <div class="clear"></div>
           <!-- 
           <el-form-item label="分类" class="form-item">
             <el-select v-model="form.classify" placeholder="选择" class="form-item">
@@ -32,7 +33,7 @@
             <el-button
               type="primary"
               icon="el-icon-search"
-              class="form-btn"
+              class="form-btn btn-style right"
               @click="onSelect()"
               >搜索</el-button
             >
@@ -745,4 +746,20 @@ export default {
   background-color: #409eff;
   border-color: #409eff;
 }
+.style {
+  width: 48%;
+  float: left;
+
+}
+.clear {
+  clear: both;
+}
+  .btn-style{
+        /* margin-left: 80px; */
+    width: 10%;
+    float: right;
+    position: relative;
+    bottom: 63px;
+    right: 400px;
+  }
 </style>
