@@ -4,19 +4,43 @@
     <div class="page-content" ref="pageTab">
       <h1>列表的增删改查</h1>
       <div class="page-tab">
-        <el-form :model="selectForm" ref="selectForm" label-width="80px" class="form">
+        <el-form
+          :model="selectForm"
+          ref="selectForm"
+          label-width="80px"
+          class="form"
+        >
           <el-form-item label="姓名：" class="form-item">
-            <el-input v-model="selectForm.name" placeholder="请输入姓名" style="    display: flex;"></el-input>
+            <el-input
+              v-model="selectForm.name"
+              placeholder="请输入姓名"
+              style="display:flex; width:86%;"
+            ></el-input>
           </el-form-item>
           <el-form-item label="电话：" class="form-item">
-            <el-input v-model="selectForm.phone" placeholder="请输入电话1或电话2" style="        width: 50%;
-    float: left;display: flex;"></el-input>
+            <el-input
+              v-model="selectForm.phone"
+              placeholder="请输入电话1或电话2"
+              style="width:86%; float: left; display: flex"
+            ></el-input>
           </el-form-item>
-        <div class="el-btn">
-          <el-button type="primary" icon="el-icon-plus" class="form-btn right" @click="onAddRow()" style="position: relative;
-    left: 111px;">添加</el-button>
-          <el-button type="primary" icon="el-icon-search" class="form-btn  weizhi-bnt" @click="onSelect()">搜索</el-button>
-        </div>
+          <div class="el-btn">
+            <el-button
+              type="primary"
+              icon="el-icon-plus"
+              class="form-btn right"
+              @click="onAddRow()"
+              style="position: relative; left: 111px"
+              >添加</el-button
+            >
+            <el-button
+              type="primary"
+              icon="el-icon-search"
+              class="form-btn weizhi-bnt"
+              @click="onSelect()"
+              >搜索</el-button
+            >
+          </div>
         </el-form>
         <!-- 表格试视图 v-if="cutLayout"-->
         <el-table
@@ -719,22 +743,21 @@ export default {
   border-color: #409eff;
 }
 .el-input {
-    position: relative;
-    font-size: 14px;
-    display: inline-block;
-    width: 50%;
-
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  width: 50%;
 }
-    .el-btn{
-          width: 21%;
-    float: right;
-    margin: 0;
-    position: relative;
-    bottom: 125px;
-    }
-    .weizhi-bnt{
-          position: relative;
-    top: 62px;
-    left: 14px;
-    }
+.el-btn {
+  width: 21%;
+  float: right;
+  margin: 0;
+  position: relative;
+  bottom: 125px;
+}
+.weizhi-bnt {
+  position: relative;
+  top: 62px;
+  left: 14px;
+}
 </style>
