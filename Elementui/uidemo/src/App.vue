@@ -2,11 +2,9 @@
   <div id="app">
     <HelloWorld />
     <hr />
-    <WhileApp />
-    <hr />
     <CallApp />
     <hr />
-    <p>你看我出不出来</p>
+    <!-- <WhileApp /> -->
     <meta charset="UTF-8" />
     <title></title>
   </div>
@@ -14,18 +12,16 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import WhileApp from "./components/WhileApp.vue";
 import CallApp from "./components/CallApp.vue";
-
-alert("这是一个警告框");
+// import WhileApp from "./components/WhileApp.vue";
 
 export default {
   name: "app",
 
   components: {
     HelloWorld,
-    WhileApp,
     CallApp,
+    // WhileApp,
   },
 };
 </script>
