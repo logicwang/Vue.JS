@@ -1,4 +1,4 @@
-<!-- 通讯录页 -->
+<!-- 列表的增删改查 -->
 <template>
   <div class="page-item page-callrecords">
     <div class="page-content" ref="pageTab">
@@ -102,14 +102,7 @@
                 @click="handleEdit(scope.$index, scope.row)"
                 >编辑</el-button
               >
-              <el-button
-                size="mini"
-                class="operation-btn operation-btn-delete"
-                round
-                type="danger"
-                @click="handleDelete(scope.$index, scope.row)"
-                >删除</el-button
-              >
+              <el-button size="mini" class="operation-btn operation-btn-delete" round type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
             </template>
           </el-table-column>
         </el-table>
