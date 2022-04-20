@@ -3,18 +3,23 @@
     <HelloWorld/>
     <hr/>
     <BindTitle/>
+    <hr/>
+    <SeenApp/>
+    <hr/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import BindTitle from './components/BindTitle.vue'
+import SeenApp from './components/SeenApp.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    BindTitle
+    BindTitle,
+    SeenApp
   }
 }
 </script>
