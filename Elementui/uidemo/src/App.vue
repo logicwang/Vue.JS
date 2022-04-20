@@ -1,28 +1,22 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld /> -->
+    <HelloWorld />
     <hr />
     <CallApp />
     <hr />
-    <!-- <WhileApp /> -->
-    <!-- <WlButton/> -->
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from "./components/HelloWorld.vue";
 import CallApp from "./components/CallApp.vue";
-// import WhileApp from "./components/WhileApp.vue";
-// import WlButton from "./components/WlButton.vue";
 
 export default {
   name: "app",
 
   components: {
     CallApp,
-    // HelloWorld,
-    // WhileApp,
-    // WlButton
+    HelloWorld,
   },
 };
 </script>
