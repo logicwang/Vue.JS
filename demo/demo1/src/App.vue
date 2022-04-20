@@ -9,6 +9,8 @@
     <ToodApp />
     <hr />
     <ReverseMessage />
+    <hr/>
+    <BindApp/>
   </div>
 </template>
 
@@ -18,6 +20,7 @@ import BindTitle from "./components/BindTitle.vue";
 import SeenApp from "./components/SeenApp.vue";
 import ToodApp from "./components/ToodApp.vue";
 import ReverseMessage from "./components/ReverseMessage.vue";
+import BindApp from "./components/BindApp.vue";
 
 export default {
   name: "App",
@@ -27,6 +30,7 @@ export default {
     SeenApp,
     ToodApp,
     ReverseMessage,
+    BindApp
   },
 };
 </script>
