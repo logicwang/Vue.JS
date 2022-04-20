@@ -14,7 +14,7 @@ import CallApp from "./components/CallApp.vue";
 export default {
   name: "app",
 
-  components: {
+  components: { 
     CallApp,
     HelloWorld,
   },
@@ -28,5 +28,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+hr{
+  border: 5px solid rgb(127,255,212);
 }
 </style>
