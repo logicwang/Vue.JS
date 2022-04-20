@@ -6,6 +6,8 @@
     <hr/>
     <SeenApp/>
     <hr/>
+    <ToodApp/>
+    <hr/>
   </div>
 </template>
 
@@ -13,13 +15,15 @@
 import HelloWorld from './components/HelloWorld.vue'
 import BindTitle from './components/BindTitle.vue'
 import SeenApp from './components/SeenApp.vue'
+import ToodApp from './components/ToodApp.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     BindTitle,
-    SeenApp
+    SeenApp,
+    ToodApp
   }
 }
 </script>
