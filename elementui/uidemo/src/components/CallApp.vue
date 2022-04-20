@@ -1,4 +1,5 @@
 <template>
+<!-- 职位的增删改查 -->
   <div>
     <div id="app">
       <h1>职位的增删改查</h1>
@@ -42,14 +43,33 @@
                 {{ scope.$index + 1 }}
               </template></el-table-column
             >
+            <el-button
+              type="primary"
+              size="small"
+              icon="el-icon-refresh"
+              @click="handleReset()"
+              >重置</el-button
+            >
             <el-table-column
               prop="name"
               label="公司名"
               width="180"
             ></el-table-column>
-            <el-table-column prop="position" show-overflow-tooltip label="职位"></el-table-column>
-            <el-table-column prop="major" show-overflow-tooltip label="专业"></el-table-column>
-            <el-table-column prop="number" show-overflow-tooltip label="数量"></el-table-column>
+            <el-table-column
+              prop="position"
+              show-overflow-tooltip
+              label="职位"
+            ></el-table-column>
+            <el-table-column
+              prop="major"
+              show-overflow-tooltip
+              label="专业"
+            ></el-table-column>
+            <el-table-column
+              prop="number"
+              show-overflow-tooltip
+              label="数量"
+            ></el-table-column>
             <el-table-column prop="birthday" show-overflow-tooltip label="操作">
               <template slot-scope="scope">
                 <el-button
@@ -207,10 +227,14 @@ export default {
       this.dialogVisible = false;
     },
 
-    confirm :function(Vue) {
+    confirm: function (Vue) {
       this.dialogVisible = false;
       Vue.set(this.tableData, this.userIndex, this.editObj);
     },
+  },
+  handleReset() {
+    this.searchForm = {};
+    this.getList();
   },
 };
 </script>
