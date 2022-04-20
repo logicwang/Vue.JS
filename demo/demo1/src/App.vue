@@ -1,31 +1,34 @@
 <template>
   <div id="app">
-    <HelloWorld/>
-    <hr/>
-    <BindTitle/>
-    <hr/>
-    <SeenApp/>
-    <hr/>
-    <ToodApp/>
-    <hr/>
+    <HelloWorld />
+    <hr />
+    <BindTitle />
+    <hr />
+    <SeenApp />
+    <hr />
+    <ToodApp />
+    <hr />
+    <ReverseMessage />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import BindTitle from './components/BindTitle.vue'
-import SeenApp from './components/SeenApp.vue'
-import ToodApp from './components/ToodApp.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import BindTitle from "./components/BindTitle.vue";
+import SeenApp from "./components/SeenApp.vue";
+import ToodApp from "./components/ToodApp.vue";
+import ReverseMessage from "./components/ReverseMessage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld,
     BindTitle,
     SeenApp,
-    ToodApp
-  }
-}
+    ToodApp,
+    ReverseMessage,
+  },
+};
 </script>
 
 <style>
@@ -37,10 +40,10 @@ export default {
   color: #2c3e50;
   margin-top: 20px;
 }
-hr{
+hr {
   border: 2px solid;
 }
-.BindTitle{
-margin-top: 20px;
+.BindTitle {
+  margin-top: 20px;
 }
 </style>
