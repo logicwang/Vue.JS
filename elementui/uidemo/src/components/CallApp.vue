@@ -2,7 +2,7 @@
   <div class="oDiv">
     <div style="margin-top: 20px">
       <h1>element的表格最优实现单条和批量修改、保存、复制、删除、新增、提交数据功能</h1>
-      <el-button @click="delArray()" type="danger">批量删除</el-button>
+      <el-button @click="delArray" type="danger">批量删除</el-button>
       <el-button @click="toggleSelection()">取消选择</el-button>
     </div>
     <el-table
@@ -126,7 +126,7 @@ export default {
       if (val) {
         // 将选中数据遍历
         val.forEach(function (item) {
-          // 遍历源数据
+          // 遍历源数据`
           that.tableData.forEach(function (itemI, indexI) {
             // 如果选中数据跟元数据某一条标识相等，删除对应的源数据
             if (item.name === itemI.name) {
