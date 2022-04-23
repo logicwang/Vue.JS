@@ -1,7 +1,7 @@
 <template>
   <div id="app-4">
     <ol>
-      <li v-for="todo in todos" :key="todo">
+      <li v-for="todo in todos" :key="todo.todos">
         {{ todo.text }}
       </li>
     </ol>
