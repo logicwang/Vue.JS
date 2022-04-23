@@ -44,8 +44,8 @@ export default {
   color: #2c3e50;
   margin-top: 20px;
 }
-hr {
-  border: 2px solid;
+hr{
+  border: 5px solid rgb(127,255,212);
 }
 .BindTitle {
   margin-top: 20px;
