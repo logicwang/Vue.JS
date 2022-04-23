@@ -13,6 +13,8 @@
     <BindApp/>
     <hr/>
     <MessageApp/>
+    <hr/>
+    <ModelApp/>
   </div>
 </template>
 
@@ -24,6 +26,7 @@ import ToodApp from "./components/ToodApp.vue";
 import ReverseMessage from "./components/ReverseMessage.vue";
 import BindApp from "./components/BindApp.vue";
 import MessageApp from "./components/MessageApp.vue";
+import ModelApp from "./components/ModelApp.vue";
 
 export default {
   name: "App",
@@ -34,6 +37,7 @@ export default {
     ToodApp,
     ReverseMessage,
     BindApp,
+    ModelApp,
     MessageApp
   },
 };
