@@ -1,32 +1,23 @@
 <template>
-  <div id="app-7">
-    <ol>
-      <!--
-      现在我们为每个 todo-item 提供 todo 对象
-      todo 对象是变量，即其内容可以是动态的。
-      我们也需要为每个组件提供一个“key”，稍后再
-      作详细解释。
-    -->
-      <todo-item
-        v-for="item in groceryList"
-        v-bind:todo="item"
-        v-bind:key="item.id"
-      ></todo-item>
-      <li>{{ todo.text }}</li>
-    </ol>
-  </div>
+ <div id="app-4">
+  <ol>
+    <li v-for="todo in todos" :key="todo.todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
 </template>
 
-<script>``
+<script>
 export default {
   name: "BindApp",
   data() {
     return {
-      groceryList: [
-        { id: 0, text: "蔬菜" },
-        { id: 1, text: "奶酪" },
-        { id: 2, text: "随便其它什么人吃的东西" },
-      ],
+        todos: [
+      { text: '学习 JavaScript' },
+      { text: '学习 Vue' },
+      { text: '整个牛项目' }
+    ]
     };
   },
 };
