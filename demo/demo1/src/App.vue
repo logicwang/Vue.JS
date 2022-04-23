@@ -15,6 +15,8 @@
     <MessageApp/>
     <hr/>
     <ModelApp/>
+    <hr/>
+    <GroceApp/>
   </div>
 </template>
 
@@ -27,6 +29,7 @@ import ReverseMessage from "./components/ReverseMessage.vue";
 import BindApp from "./components/BindApp.vue";
 import MessageApp from "./components/MessageApp.vue";
 import ModelApp from "./components/ModelApp.vue";
+import GroceApp from "./components/GroceApp.vue";
 
 export default {
   name: "App",
@@ -38,7 +41,8 @@ export default {
     ReverseMessage,
     BindApp,
     ModelApp,
-    MessageApp
+    MessageApp,
+    GroceApp
   },
 };
 </script>
