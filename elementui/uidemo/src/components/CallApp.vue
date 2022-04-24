@@ -14,7 +14,7 @@
       max-height="250"
       @selection-change="handleSelectionChange"
     >
-      <el-table-column type="selection" width="55"> </el-table-column>
+      <el-table-column type="selection" width="55" highlight-current-row> </el-table-column>
       <el-table-column fixed prop="date" label="日期" width="150">
       </el-table-column>
       <el-table-column prop="name" label="姓名" width="120"> </el-table-column>
