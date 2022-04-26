@@ -7,6 +7,8 @@
     <MetaApp />
     <hr />
     <TbaleApp />
+    <hr />
+    <WhileApp />
   </div>
 </template>
 
@@ -15,6 +17,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import CallApp from "./components/CallApp.vue";
 import MetaApp from "./components/MetaApp.vue";
 import TbaleApp from "./components/TbaleApp.vue";
+import WhileApp from "./components/WhileApp.vue";
 
 export default {
   name: "app",
@@ -23,7 +26,8 @@ export default {
     CallApp,
     HelloWorld,
     MetaApp,
-    TbaleApp
+    TbaleApp,
+    WhileApp
   },
 };
 </script>
