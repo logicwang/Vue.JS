@@ -5,15 +5,12 @@
     <hr />
     <MetaApp />
     <hr />
-    <TbaleApp />
-    <hr />
   </div>
 </template>
 
 <script>
 import CallApp from "./components/CallApp.vue";
 import MetaApp from "./components/MetaApp.vue";
-import TbaleApp from "./components/TbaleApp.vue";
 
 export default {
   name: "app",
@@ -21,7 +18,6 @@ export default {
   components: { 
     CallApp,
     MetaApp,
-    TbaleApp,
   },
 };
 </script>
