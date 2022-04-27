@@ -120,7 +120,7 @@ export default {
         name: this.formInline.name,
         address: this.formInline.address,
       });
-      // 添加完数据还要从新排一下我们的自增id哦
+      // 添加完数据还要从新排一下我们的自增id
       for (let i = 0; i < this.tableData.length; i++) {
         this.tableData[i].zizengId = i;
       }
