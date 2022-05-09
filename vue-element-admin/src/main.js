@@ -14,7 +14,6 @@ import App from './App'
 import echarts from 'echarts' // 引入echarts图表插件
 import store from './store'
 import router from './router'
-import * as echarts from 'echarts'
 
 import './icons' // icon
 import './permission' // permission control
