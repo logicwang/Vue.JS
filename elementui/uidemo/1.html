@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue实现表格的增删改查</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div id="table">
+        <div class="add">
+            <input type="text" placeholder="标题" v-model="input.name" />
+            <input type="text" placeholder="发布人" v-model="input.user" />
+            <input type="date" placeholder="发布时间" v-model="input.date" />
+            <button :disabled="!input.name||!input.user||!input.date" @click="addItem()">新增</button>
+        </div>
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" v-model="checkALL" @change="selectAllItem(v)" />序号</th>
+                    <th>标题</th>
+                    <th>发布人</th>
+                    <th>发布时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(v,i) in items" :key="v.id">
+                    <td><input type="checkbox" v-model="v.check" @change="selectItem(v)" />{{v.id}}</td>
+                    <td>{{v.name}}</td>
+                    <td>{{v.user}}</td>
+                    <td>{{v.date}}</td>
+                    <td>
+                        <button :disabled="!v.check" @click="delItem(i)">删除</button>
+                        <button @click="updataShow(v)">编辑</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div id="layer" v-show="flag">
+            <div class="mask">
+                <div class="title">
+                    编辑
+                    <span @click="flag = false">x</span>
+                </div>
+                <div class="content">
+                    <input type="text" placeholder="标题" v-model="edit.name" />
+                    <input type="text" placeholder="发布人" v-model="edit.user" />
+                    <input type="date" placeholder="发布时间" v-model="edit.date" />
+                    <button @click="updataItem()" :disabled="!edit.name||!edit.user||!edit.date">更新</button>
+                    <button @click="flag = false">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

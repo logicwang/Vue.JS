@@ -62,7 +62,7 @@
         "
         >全选</el-button
       >
-      <el-button @click="toggleSelection()">取消选择</el-button>
+      <el-button @click="handlerReset()">取消选择</el-button>
     </div>
   </div>
 </template>
@@ -123,6 +123,12 @@ export default {
     }
   },
   methods: {
+        //点击重置
+    handlerReset() {
+      this.formData = {};
+      this.pageNum = 1;
+      this.getList();
+    },
     // 获取选中的数据
     handleSelectionChange(val) {
       console.log("下面打印的是选中的数据");
