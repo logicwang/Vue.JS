@@ -1,69 +1,100 @@
 <template>
-  <div id="app">
-    <el-form
-      :inline="true"
-      :model="formInline"
-      class="demo-form-inline"
-      sort-orders="”array“"
+  <div>
+    <!-- 面包屑导航 -->
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/Welcome' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>权限管理</el-breadcrumb-item>
+      <el-breadcrumb-item>角色列表</el-breadcrumb-item>
+    </el-breadcrumb>
+    <!-- 卡片 -->
+    <el-card class="box-card">
+      <!-- 新增按钮 -->
+      <el-row :gutter="20">
+        <el-col :span="6">
+          <div class="grid-content bg-purple"></div>
+          <el-button type="primary" @click="onhandAdd">添加角色</el-button>
+        </el-col>
+      </el-row>
+      <!-- 表格 -->
+      <el-table :data="tableData" border="" style="width: 100%">
+        <el-table-column type="expand">
+          <template slot-scope="scope">
+            <el-row
+              :class="['bdbottom',i1 === 0? 'bdtop' : '', 'vcenter'] "
+              :gutter="20"
+              :span="6"
+              v-for="(item_ong,i1) in scope.row.children"
+              :key="item_ong.id"
+            >
+              <!-- 一级 -->
+              <el-col :span="5">
+                <el-tag>{{item_ong.authName}}</el-tag>
+                <i class="el-icon-caret-right"></i>
+              </el-col>
+              <!-- 二级和三级 -->
+              <el-col :span="19">
+                <!-- 二级权限 -->
+                <el-row v-for="(item_two,i2) in item_ong.children" :key="i2">
+                  <el-col :span="6">
+                    <el-tag type="success">{{item_two.authName}}</el-tag>
+                    <i class="el-icon-caret-right"></i>
+                  </el-col>
+                  <el-col :span="18">
+                    <el-tag
+                      type="warning"
+                      v-for="(item_three,i3) in item_two.children"
+                      :key="i3"
+                    >{{item_three.authName}}</el-tag>
+                    <i class="el-icon-caret-right"></i>
+                  </el-col>
+                </el-row>
+              </el-col>
+            </el-row>
+          </template>
+        </el-table-column>
+        <el-table-column label="#" type="index" width="80"></el-table-column>
+        <el-table-column label="角色名称" prop="roleName"></el-table-column>
+        <el-table-column label="角色描述" prop="roleDesc"></el-table-column>
+        <el-table-column label="操作" prop="id">
+          <template slot-scope="scope">
+            <el-button
+              type="primary"
+              icon="el-icon-edit"
+              size="small"
+              @click="handleEdit(scope.$index, scope.row)"
+            >编辑</el-button>
+            <el-button type="warning" icon="el-icon-delete" size="small">删除</el-button>
+            <el-button type="danger" icon="el-icon-edit" size="small">权限</el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+    </el-card>
+    <!-- 新增编辑弹框 -->
+    <el-dialog
+      :title="addtitle"
+      :visible.sync="dialogVisible"
+      width="40%"
+      :before-close="handleClose"
     >
-      <el-form-item label="日期">
-        <el-input
-          v-model="formInline.date"
-          placeholder="日期"
-          sort-orders="”array“"
-        ></el-input>
-      </el-form-item>
-      <el-form-item label="姓名">
-        <el-input
-          v-model="formInline.name"
-          placeholder="姓名 "
-          sort-orders="”array“"
-        ></el-input>
-      </el-form-item>
-      <el-form-item label="地址">
-        <el-input
-          v-model="formInline.address"
-          placeholder="地址"
-          sort-orders="”array“"
-        ></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="onSubmit">新增</el-button>
-      </el-form-item>
-    </el-form>
-    <el-table
-      ref="multipleTable"
-      :data="tableData"
-      tooltip-effect="dark"
-      style="width: 100%"
-      @selection-change="handleSelectionChange"
-    >
-      <el-table-column type="selection" width="55"> </el-table-column>
-      <el-table-column label="日期" width="120">
-        <template slot-scope="scope">{{ scope.row.date }}</template>
-      </el-table-column>
-      <el-table-column prop="name" label="姓名" width="120"> </el-table-column>
-      <el-table-column prop="address" label="地址" show-overflow-tooltip>
-      </el-table-column>
-    </el-table>
-    <div style="margin-top: 20px">
-      <el-button @click="arrsDel()">批量删除</el-button>
-      <el-button
-        @click="
-          toggleSelection([
-            tableData[0],
-            tableData[1],
-            tableData[2],
-            tableData[3],
-            tableData[4],
-            tableData[5],
-            tableData[6],
-          ])
-        "
-        >全选</el-button
+      <el-form
+        :model="ruleForm"
+        :rules="rules"
+        ref="refRuleForm"
+        label-width="100px"
+        class="demo-ruleForm"
       >
-      <el-button @click="handlerReset()">取消选择</el-button>
-    </div>
+        <el-form-item label="角色名称" prop="roleName">
+          <el-input v-model="ruleForm.roleName"></el-input>
+        </el-form-item>
+        <el-form-item label="角色描述" prop="roleDesc">
+          <el-input v-model="ruleForm.roleDesc"></el-input>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogVisibleConfirm">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -71,114 +102,103 @@
 export default {
   data() {
     return {
-      formInline: {
-        date: "",
-        name: "",
-        address: "",
+      tableData: [],
+      dialogVisible: false,
+      addtitle: "添加角色",
+      ruleForm: {
+        roleName: "",
+        roleDesc: ""
       },
-      tableData: [
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-08",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-06",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-07",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-      ],
-      multipleSelection: [],
+      allid: "",
+      // 验证规则
+      rules: {
+        roleName: [
+          { required: true, message: "请输入角色名称", trigger: "blur" },
+          { min: 3, max: 5, message: "长度在 3 到 5 个字符", trigger: "blur" }
+        ],
+        roleDesc: [{ required: true, message: "角色描述", trigger: "blur" }]
+      }
     };
   },
   created() {
-    // 页面默认有没有数据不重要,重要的是拿到数据或数据改变就要去处理数据,添加或改变自增id,也就是模拟索引值
-    for (let i = 0; i < this.tableData.length; i++) {
-      this.tableData[i].zizengId = i
-    }
+    this.tabList();
   },
   methods: {
-        //点击重置
-    handlerReset() {
-      this.formData = {};
-      this.pageNum = 1;
-      this.getList();
-    },
-    // 获取选中的数据
-    handleSelectionChange(val) {
-      console.log("下面打印的是选中的数据");
-      console.log(val);
-      this.multipleSelection = val;
-    },
-    // 批量删除
-    arrsDel() {
-      // 删除时arr接收选中数据的自增Id
-      let arr = [];
-      //定义一个空值
-      for (let i = 0; i < this.multipleSelection.length;i++) 
-        //定义关键字i的值为0；当i小于多选框时，返回数组中元素的数目；i增加
-      {
-        arr.push(this.multipleSelection[i].zizengId); //此处接收了所有选中的自增id
-        //定义push()方法(将一个或多个元素添加到数组的末尾，并返回该数组的新长度),在里面定义
-      }
-      arr.sort(); //此处作用是将数组内的值从小到大排序,下面循环从小到大删除,就不会出现问题
-      for (let a = 0; a < arr.length; a++) {
-        this.tableData.splice(arr[a] - a, 1); //这一步就已经删除成功了,arr[a]-a的原因是每次删除后原数组都会发生变化,我们的删除起点要改变一下  splice()方法用于添加或删除数组中的元素。
-      }
-      // 删除完成后要从新排一下我们的自增id
-      for (let i = 0; i < this.tableData.length; i++) {
-        this.tableData[i].zizengId = i;
-      }
-    },
-    // 增加新数据
-    onSubmit() {
-      this.tableData.unshift({
-        date: this.formInline.date,
-        name: this.formInline.name,
-        address: this.formInline.address,
+    //   表格接口列表
+    tabList() {
+      this.$api.jurisdiction.rolelist().then(res => {
+        console.log(res.data.data, "]]]]]]]");
+        this.tableData = res.data.data;
       });
-      // 添加完数据还要从新排一下我们的自增id
-      for (let i = 0; i < this.tableData.length; i++) {
-        this.tableData[i].zizengId = i;
-      }
     },
-    toggleSelection(rows) {
-      if (rows) {
-        rows.forEach((row) => {
-          this.$refs.multipleTable.toggleRowSelection(row);
-        });
+    // 新增
+    onhandAdd() {
+      this.dialogVisible = true;
+    },
+    handleClose() {
+      this.dialogVisible = false;
+    },
+    // 编辑
+    handleEdit(index, row) {
+      console.log(index, row.id);
+      this.dialogVisible = true;   //显示弹框
+      this.ruleForm = row;         //row当前行数据，把当前行的数据赋值给 表单
+      this.allid = row.id;         //把id存全局
+    },
+    // 确定
+    dialogVisibleConfirm() {
+      // 新增接口
+      if (!this.allid) {
+        this.$api.jurisdiction.addrole(this.ruleForm)
+          .then(res => {
+            // console.log(res,"新增")
+            this.$message.success("添加成功");     //新增成功消息提示
+            this.$refs.refRuleForm.resetFields(); //清空表格数据
+            this.dialogVisible = false;           //关闭弹框
+            this.tabList();                       //刷新列表
+          })
+          .catch(res => {
+            this.$message.error("添加失败");
+          });
       } else {
-        this.$refs.multipleTable.clearSelection();
+        // 修改接口
+        let id = this.allid
+        let params = {
+          roleName:this.ruleForm.roleName,
+          roleDesc:this.ruleForm.roleDesc,
+        }
+        this.$api.jurisdiction.edtrole(id,params)
+          .then(res => {
+            console.log(res,"修改")
+            this.$message.success("修改成功");
+            this.$refs.refRuleForm.resetFields(res);
+            this.dialogVisible = false;
+            this.tabList();
+          })
+          .catch(res => {
+            this.$message.error("修改失败");
+          });
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
+.bdtop {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.bdbottom {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.el-tag {
+  margin: 10px 0px;
+}
+.vcenter {
+  display: flex;
+  align-items: center;
+}
 </style>
