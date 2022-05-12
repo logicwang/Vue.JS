@@ -1,23 +1,22 @@
 <template>
   <div id="app">
-    <hr />
+    <!-- <hr />
     <CallApp />
     <hr />
-    <MetaApp />
-    <hr />
+    <MetaApp /> -->
   </div>
 </template>
 
 <script>
-import CallApp from "./components/CallApp.vue";
-import MetaApp from "./components/MetaApp.vue";
+// import CallApp from "./components/CallApp.vue";
+// import MetaApp from "./components/MetaApp.vue";
 
 export default {
   name: "app",
 
   components: { 
-    CallApp,
-    MetaApp,
+    // CallApp,
+    // MetaApp,
   },
 };
 </script>
