@@ -1,13 +1,6 @@
 <template>
   <div id="app-7">
-    <ol>
-      <todo-item
-        v-for="item in groceryList"
-        v-bind:todo="item"
-        v-bind:key="item.id"
-      ></todo-item>
-      <li>{{ todo.text }}</li>
-    </ol>
+    <button class="switch" @click="toswitch">{{ editText }}</button>
   </div>
 </template>
 
@@ -16,13 +9,18 @@ export default {
   name: "GroceApp",
   data() {
     return {
-          props: ['todo'],
-      groceryList: [
-        { id: 0, text: "蔬菜" },
-        { id: 1, text: "奶酪" },
-        { id: 2, text: "随便其它什么人吃的东西" },
-      ],
+      editText: "编辑",
     };
+  },
+  methods: {
+    toswitch() {
+      let self = this;
+      if (self.editText == "编辑") {
+        self.editText = "完成";
+      } else {
+        self.editText = "编辑";
+      }
+    },
   },
 };
 </script>
