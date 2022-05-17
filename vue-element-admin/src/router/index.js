@@ -271,7 +271,17 @@ export const asyncRoutes = [{
             meta: { title: 'Error Log', icon: 'bug' }
         }]
     },
-
+    {
+        path: '/chart',
+        component: Layout,
+        children: [{
+            path: 'log',
+            component: () =>
+                import ('@/views/chart/index'),
+            name: 'chart',
+            meta: { title: 'chart', icon: 'chart' }
+        }]
+    },
     {
         path: '/excel',
         component: Layout,
