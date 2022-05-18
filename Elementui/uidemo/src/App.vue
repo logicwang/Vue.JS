@@ -4,14 +4,17 @@
     <CallApp />
     <hr />
     <MetaApp /> -->
-    <WorldApp/>
+    <!-- <WorldApp/> -->
+    <HelloWorld/>
   </div>
 </template>
 
 <script>
 // import CallApp from "./components/CallApp.vue";
 // import MetaApp from "./components/MetaApp.vue";
-import WorldApp from "./components/WorldApp.vue";
+// import WorldApp from "./components/WorldApp.vue";
+import HelloWorld from "./components/HelloWorld.vue";
+
 
 export default {
   name: "app",
@@ -19,7 +22,8 @@ export default {
   components: { 
     // CallApp,
     // MetaApp,
-    WorldApp
+    // WorldApp
+    HelloWorld
   },
 };
 </script>
