@@ -1,6 +1,5 @@
 <template>
   <div class="element">
-    <h1>element+vue增删</h1>
     <el-form
       :model="dynamicValidateForm"
       ref="dynamicValidateForm"

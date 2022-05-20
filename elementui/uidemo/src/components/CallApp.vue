@@ -1,10 +1,7 @@
 <template>
   <div class="oDiv">
     <div style="margin-top: 20px">
-      <h1>
-        element的表格最优实现单条和批量修改、保存、复制、删除、新增、提交数据功能
-      </h1>
-      <el-button @click="delArray" type="danger">批量删除</el-button>
+      <el-button @click="delArray">批量删除</el-button>
       <el-button @click="toggleSelection()">取消选择</el-button>
     </div>
     <el-table
@@ -14,7 +11,8 @@
       max-height="250"
       @selection-change="handleSelectionChange"
     >
-      <el-table-column type="selection" width="55" highlight-current-row> </el-table-column>
+      <el-table-column type="selection" width="55" highlight-current-row>
+      </el-table-column>
       <el-table-column fixed prop="date" label="日期" width="150">
       </el-table-column>
       <el-table-column prop="name" label="姓名" width="120"> </el-table-column>
@@ -53,56 +51,24 @@ export default {
           zip: 200333,
         },
         {
-          date: "2016-05-02",
-          name: "王小虎2",
+          date: "2016-05-03",
+          name: "王小虎1",
           province: "上海",
           city: "普陀区",
           address: "上海市普陀区金沙江路 1518 弄",
           zip: 200333,
         },
         {
-          date: "2016-05-04",
-          name: "王小虎3",
+          date: "2016-05-03",
+          name: "王小虎1",
           province: "上海",
           city: "普陀区",
           address: "上海市普陀区金沙江路 1518 弄",
           zip: 200333,
         },
         {
-          date: "2016-05-04",
-          name: "王小虎3",
-          province: "上海",
-          city: "普陀区",
-          address: "上海市普陀区金沙江路 1518 弄",
-          zip: 200333,
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎3",
-          province: "上海",
-          city: "普陀区",
-          address: "上海市普陀区金沙江路 1518 弄",
-          zip: 200333,
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎3",
-          province: "上海",
-          city: "普陀区",
-          address: "上海市普陀区金沙江路 1518 弄",
-          zip: 200333,
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎3",
-          province: "上海",
-          city: "普陀区",
-          address: "上海市普陀区金沙江路 1518 弄",
-          zip: 200333,
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎3",
+          date: "2016-05-03",
+          name: "王小虎1",
           province: "上海",
           city: "普陀区",
           address: "上海市普陀区金沙江路 1518 弄",
@@ -136,8 +102,47 @@ export default {
             }
           });
         });
-      } // 清除选中状态
+      } 
+    // 清除选中状态
       this.$refs.multipleTable.clearSelection();
+    },
+    // 删除数据
+    handleDelete(index, row) {
+      console.log("handleDelete index:" + index + "  name:" + row.name);
+      //打印index,row
+      this.$confirm("确定要删除选择项吗?, 是否继续?", "提示", {
+        //confirm() 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框。
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning",
+      })
+        .then(() => {
+          //删除
+          //第一步 取这个 id 所在的 行号
+          var i = 0;
+          //定义I的值为0
+          var aaa = -1;
+          //命名一个变量aaa,并赋值于这个变量为-1
+          for (i; i < this.tableData.length; i++) { 
+            // console.log("遍历数据:  "+ this.tableData[i].name);
+            console.log("=,>" + i);
+            //当i小于10(假设this.tableData.length的值为10)，i则增加)
+            if (this.tableData[i].id == row.id) {
+              aaa = i;
+            }
+          }
+          console.log("删除前 总行数: " + this.tableData.length + " ");
+          this.tableData.splice(aaa, 1);
+          console.log("删除后 总行数: " + this.tableData.length + " ");
+          this.ListLoadData; //重新加载 数据
+          //console.log( "当前页: "+this.pageCurrentNum + " "   );
+          this.$message({ type: "success", message: "删除成功" });
+        })
+        .catch((err) => {
+          if (err != "cancel") {
+            this.$message({ type: "error", message: "删除失败 " + err });
+          }
+        });
     },
   },
 };

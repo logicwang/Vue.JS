@@ -1,6 +1,5 @@
 <template>
   <div class="name">
-    <h1>element+vue增删改查</h1>
     <el-form
       :model="ruleForm"
       status-icon
