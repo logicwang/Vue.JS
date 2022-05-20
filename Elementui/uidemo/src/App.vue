@@ -1,29 +1,33 @@
 <template>
   <div id="app">
-    <!-- <hr />
+    <hr />
     <CallApp />
     <hr />
-    <MetaApp /> -->
-    <!-- <WorldApp/> -->
-    <HelloWorld/>
+    <MetaApp />
+    <hr />
+    <WorldApp />
+    <hr />
+    <HelloWorld />
+    <!-- <MiApp/> -->
   </div>
 </template>
 
 <script>
-// import CallApp from "./components/CallApp.vue";
-// import MetaApp from "./components/MetaApp.vue";
-// import WorldApp from "./components/WorldApp.vue";
+import CallApp from "./components/CallApp.vue";
+import MetaApp from "./components/MetaApp.vue";
+import WorldApp from "./components/WorldApp.vue";
 import HelloWorld from "./components/HelloWorld.vue";
-
+// import MiApp from "./components/MiApp.vue"
 
 export default {
   name: "app",
 
-  components: { 
-    // CallApp,
-    // MetaApp,
-    // WorldApp
-    HelloWorld
+  components: {
+    CallApp,
+    MetaApp,
+    WorldApp,
+    HelloWorld,
+    // MiApp
   },
 };
 </script>
@@ -36,7 +40,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-hr{
-  border: 5px solid rgb(127,255,212);
+hr {
+  border: 5px solid rgb(127, 255, 212);
 }
 </style>
