@@ -3,20 +3,21 @@
     <hr />
     <CallApp />
     <hr />
-    <MetaApp />
+    <!-- <MetaApp />
     <hr />
     <WorldApp />
     <hr />
     <HelloWorld />
-    <!-- <MiApp/> -->
+    <hr />
+    <MiApp/> -->
   </div>
 </template>
 
 <script>
 import CallApp from "./components/CallApp.vue";
-import MetaApp from "./components/MetaApp.vue";
-import WorldApp from "./components/WorldApp.vue";
-import HelloWorld from "./components/HelloWorld.vue";
+// import MetaApp from "./components/MetaApp.vue";
+// import WorldApp from "./components/WorldApp.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
 // import MiApp from "./components/MiApp.vue"
 
 export default {
@@ -24,9 +25,9 @@ export default {
 
   components: {
     CallApp,
-    MetaApp,
-    WorldApp,
-    HelloWorld,
+    // MetaApp,
+    // WorldApp,
+    // HelloWorld,
     // MiApp
   },
 };

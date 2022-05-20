@@ -1,8 +1,10 @@
 <template>
   <div class="oDiv">
     <div style="margin-top: 20px">
-      <el-button @click="delArray">批量删除</el-button>
-      <el-button @click="toggleSelection()">取消选择</el-button>
+      <div style="float: left; margin-left: 27px">
+        <el-button @click="delArray">批量删除</el-button>
+        <el-button @click="handleCheckedCitiesChange(value.length)">取消选择</el-button>
+      </div>
     </div>
     <el-table
       :data="tableData"
@@ -25,15 +27,16 @@
       <el-table-column fixed="right" label="操作" width="120">
         <template slot-scope="scope">
           <el-button
-            @click.native.prevent="deleteRow(scope.tableData)"
-            type="text"
-            size="small"
+            size="mini"
+            class="el-button el-button--text el-button--small"
+            round
+            type="danger"
+            @click="handleDelete(scope.$aaa, scope.row)"
+            >删除</el-button
           >
-            移除
-          </el-button>
         </template></el-table-column
-      ></el-table
-    >
+      >
+    </el-table>
   </div>
 </template>
 <script>
@@ -94,22 +97,27 @@ export default {
       if (val) {
         // 将选中数据遍历
         val.forEach(function (item) {
-          // 遍历源数据`
+          // 遍历源数据
           that.tableData.forEach(function (itemI, indexI) {
             // 如果选中数据跟元数据某一条标识相等，删除对应的源数据
             if (item.name === itemI.name) {
               that.tableData.splice(indexI, 1);
+              console.log('------tableDate---',that.tableData)
             }
           });
         });
-      } 
-    // 清除选中状态
+      }
+      // 清除选中状态
       this.$refs.multipleTable.clearSelection();
     },
+    // 一件全选
+      handleCheckedCitiesChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.cities.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
+      },
     // 删除数据
-    handleDelete(index, row) {
-      console.log("handleDelete index:" + index + "  name:" + row.name);
-      //打印index,row
+    handleDelete(index) {
       this.$confirm("确定要删除选择项吗?, 是否继续?", "提示", {
         //confirm() 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框。
         confirmButtonText: "确定",
@@ -117,25 +125,9 @@ export default {
         type: "warning",
       })
         .then(() => {
-          //删除
-          //第一步 取这个 id 所在的 行号
-          var i = 0;
-          //定义I的值为0
-          var aaa = -1;
-          //命名一个变量aaa,并赋值于这个变量为-1
-          for (i; i < this.tableData.length; i++) { 
-            // console.log("遍历数据:  "+ this.tableData[i].name);
-            console.log("=,>" + i);
-            //当i小于10(假设this.tableData.length的值为10)，i则增加)
-            if (this.tableData[i].id == row.id) {
-              aaa = i;
-            }
-          }
-          console.log("删除前 总行数: " + this.tableData.length + " ");
-          this.tableData.splice(aaa, 1);
-          console.log("删除后 总行数: " + this.tableData.length + " ");
+          this.tableData.splice(index, 1,);
+          console.log('---tableData--',this.tableData)
           this.ListLoadData; //重新加载 数据
-          //console.log( "当前页: "+this.pageCurrentNum + " "   );
           this.$message({ type: "success", message: "删除成功" });
         })
         .catch((err) => {
