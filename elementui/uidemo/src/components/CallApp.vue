@@ -1,42 +1,49 @@
 <template>
   <div class="oDiv">
-    <div style="margin-top: 20px">
-      <div style="float: left; margin-left: 27px">
-        <el-button @click="delArray">批量删除</el-button>
-        <el-button @click="handleCheckedCitiesChange(value.length)">取消选择</el-button>
-      </div>
-    </div>
-    <el-table
-      :data="tableData"
-      ref="multipleTable"
-      style="width: 100%"
-      max-height="250"
-      @selection-change="handleSelectionChange"
-    >
-      <el-table-column type="selection" width="55" highlight-current-row>
-      </el-table-column>
-      <el-table-column fixed prop="date" label="日期" width="150">
-      </el-table-column>
-      <el-table-column prop="name" label="姓名" width="120"> </el-table-column>
-      <el-table-column prop="province" label="省份" width="120">
-      </el-table-column>
-      <el-table-column prop="city" label="市区" width="120"> </el-table-column>
-      <el-table-column prop="address" label="地址" width="300">
-      </el-table-column>
-      <el-table-column prop="zip" label="邮编" width="120"> </el-table-column>
-      <el-table-column fixed="right" label="操作" width="120">
-        <template slot-scope="scope">
-          <el-button
-            size="mini"
-            class="el-button el-button--text el-button--small"
-            round
-            type="danger"
-            @click="handleDelete(scope.$aaa, scope.row)"
-            >删除</el-button
+    <div>
+      <div style="margin-top: 20px">
+        <div style="float: left; margin-left: 27px" max-height="100%">
+          <el-button @click="delArray">批量删除</el-button>
+          <el-button @click="handleCheckedCitiesChange(value.length)"
+            >取消选择</el-button
           >
-        </template></el-table-column
+        </div>
+      </div>
+      <el-table
+        :data="tableData"
+        ref="multipleTable"
+        style="width: 100%"
+        max-height="250"
+        :fit="false"
+        @selection-change="handleSelectionChange"
       >
-    </el-table>
+        <el-table-column type="selection" width="55" highlight-current-row>
+        </el-table-column>
+        <el-table-column fixed prop="date" label="日期" width="150">
+        </el-table-column>
+        <el-table-column prop="name" label="姓名" width="120" :stripe="true">
+        </el-table-column>
+        <el-table-column prop="province" label="省份" width="120">
+        </el-table-column>
+        <el-table-column prop="city" label="市区" width="120">
+        </el-table-column>
+        <el-table-column prop="address" label="地址" width="300">
+        </el-table-column>
+        <el-table-column prop="zip" label="邮编" width="120"> </el-table-column>
+        <el-table-column fixed="right" label="操作" width="120">
+          <template slot-scope="scope">
+            <el-button
+              size="mini"
+              class="el-button el-button--text el-button--small"
+              round
+              type="danger"
+              @click="handleDelete(scope.$aaa, scope.row)"
+              >删除</el-button
+            >
+          </template></el-table-column
+        >
+      </el-table>
+    </div>
   </div>
 </template>
 <script>
@@ -102,7 +109,7 @@ export default {
             // 如果选中数据跟元数据某一条标识相等，删除对应的源数据
             if (item.name === itemI.name) {
               that.tableData.splice(indexI, 1);
-              console.log('------tableDate---',that.tableData)
+              console.log("------tableDate---", that.tableData);
             }
           });
         });
@@ -111,11 +118,12 @@ export default {
       this.$refs.multipleTable.clearSelection();
     },
     // 一件全选
-      handleCheckedCitiesChange(value) {
-        let checkedCount = value.length;
-        this.checkAll = checkedCount === this.cities.length;
-        this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
-      },
+    handleCheckedCitiesChange(value) {
+      let checkedCount = value.length;
+      this.checkAll = checkedCount === this.cities.length;
+      this.isIndeterminate =
+        checkedCount > 0 && checkedCount < this.cities.length;
+    },
     // 删除数据
     handleDelete(index) {
       this.$confirm("确定要删除选择项吗?, 是否继续?", "提示", {
@@ -125,8 +133,8 @@ export default {
         type: "warning",
       })
         .then(() => {
-          this.tableData.splice(index, 1,);
-          console.log('---tableData--',this.tableData)
+          this.tableData.splice(index, 1);
+          console.log("---tableData--", this.tableData);
           this.ListLoadData; //重新加载 数据
           this.$message({ type: "success", message: "删除成功" });
         })
@@ -139,3 +147,10 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.oDiv {
+  margin: 0 auto;
+  max-width: 60%;
+  border: 1px solid #9093993d;
+}
+</style>

@@ -1,28 +1,20 @@
 <template>
-  <div id="app">
-    <el-form
+  <div id="aaa">
+  <div class="name">
+      <el-form
       :inline="true"
       :model="formInline"
       class="demo-form-inline"
       sort-orders="”array“"
     >
       <el-form-item label="日期">
-        <el-input
-          v-model="formInline.date"
-          sort-orders="”array“"
-        ></el-input>
+        <el-input v-model="formInline.date" sort-orders="”array“"></el-input>
       </el-form-item>
       <el-form-item label="姓名">
-        <el-input
-          v-model="formInline.name"
-          sort-orders="”array“"
-        ></el-input>
+        <el-input v-model="formInline.name" sort-orders="”array“"></el-input>
       </el-form-item>
       <el-form-item label="地址">
-        <el-input
-          v-model="formInline.address"
-          sort-orders="”array“"
-        ></el-input>
+        <el-input v-model="formInline.address" sort-orders="”array“"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">新增</el-button>
@@ -47,6 +39,7 @@
       <el-button @click="arrsDel">批量删除</el-button>
       <el-button @click="toggleSelection()">取消选择</el-button>
     </div>
+  </div>
   </div>
 </template>
 
@@ -120,5 +113,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+#aaa {
+  margin: 0 auto;
+  border: 1px solid #9093993d;
+  max-width: 65%;
+  .name{
+    padding: 25px;
+  }
+}
 </style>
