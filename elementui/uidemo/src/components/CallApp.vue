@@ -3,10 +3,10 @@
     <div>
       <div style="margin-top: 20px">
         <div style="float: left; margin-left: 27px" max-height="100%">
-          <el-button @click="delArray">批量删除</el-button>
-          <el-button @click="handleCheckedCitiesChange(value.length)"
-            >取消选择</el-button
+          <el-button @click="handleCheckAllChange(val)"
+            >全选</el-button
           >
+          <el-button @click="delArray">批量删除</el-button>
         </div>
       </div>
       <el-table
@@ -118,12 +118,7 @@ export default {
       this.$refs.multipleTable.clearSelection();
     },
     // 一件全选
-    handleCheckedCitiesChange(value) {
-      let checkedCount = value.length;
-      this.checkAll = checkedCount === this.cities.length;
-      this.isIndeterminate =
-        checkedCount > 0 && checkedCount < this.cities.length;
-    },
+    
     // 删除数据
     handleDelete(index) {
       this.$confirm("确定要删除选择项吗?, 是否继续?", "提示", {
