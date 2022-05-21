@@ -3,32 +3,37 @@
     <hr />
     <CallApp />
     <hr />
-    <!-- <MetaApp />
-    <hr />
+    <MetaApp />
+    <!-- <hr />
     <WorldApp />
     <hr />
     <HelloWorld />
     <hr />
-    <MiApp/> -->
+    <MiApp/>
+    <hr />
+    <AppleApp /> -->
   </div>
+  
 </template>
 
 <script>
 import CallApp from "./components/CallApp.vue";
-// import MetaApp from "./components/MetaApp.vue";
+import MetaApp from "./components/MetaApp.vue";
 // import WorldApp from "./components/WorldApp.vue";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import MiApp from "./components/MiApp.vue"
+// import AppleApp from "./components/AppleApp.vue"
 
 export default {
   name: "app",
 
   components: {
     CallApp,
-    // MetaApp,
+    MetaApp,
     // WorldApp,
     // HelloWorld,
-    // MiApp
+    // MiApp,
+    // AppleApp
   },
 };
 </script>
