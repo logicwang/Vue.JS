@@ -3,9 +3,6 @@
     <div>
       <div style="margin-top: 20px">
         <div style="float: left; margin-left: 27px" max-height="100%">
-          <el-button @click="handleCheckAllChange(val)"
-            >全选</el-button
-          >
           <el-button @click="delArray">批量删除</el-button>
         </div>
       </div>
@@ -117,7 +114,6 @@ export default {
       // 清除选中状态
       this.$refs.multipleTable.clearSelection();
     },
-    // 一件全选
     
     // 删除数据
     handleDelete(index) {
@@ -142,7 +138,7 @@ export default {
   },
 };
 </script>
-<style >
+<style lang="scss">
 .oDiv {
   margin: 0 auto;
   max-width: 60%;
