@@ -17,6 +17,7 @@ npm install -g @vue/cli
 yarn global add @vue/
 
 2. 通过 vue 命令，创建一个 `hello-world` 项目
+```
 
 ```bash
 vue create hello-world
