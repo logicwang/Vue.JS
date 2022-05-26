@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <hr />
+    <!-- <hr />
     <DemoApp />
-    <hr />
-    <!-- <HelloWorld />
+    <hr /> -->
+    <AppApp />
+    <!-- <hr />
+    <HelloWorld />
     <hr />
     <NameApp />
     <hr />
@@ -15,7 +17,8 @@
 </template>
 
 <script>
-import DemoApp from "./components/DemoApp.vue";
+import AppApp from "./components/AppApp.vue";
+// import DemoApp from "./components/DemoApp.vue";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import NameApp from "./components/NameApp.vue";
 // import MeteApp from "./components/MeteApp.vue";
@@ -24,7 +27,8 @@ import DemoApp from "./components/DemoApp.vue";
 export default {
   name: "app",
   components: {
-    DemoApp,
+    AppApp,
+    // DemoApp,
     // HelloWorld,
     // NameApp,
     // MeteApp,
