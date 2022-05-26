@@ -100,6 +100,6 @@ export default {
   width: 460px;
 }
 .padding{
-    padding: 24px王宇飞;
+    padding: 24px;
 }
 </style>
