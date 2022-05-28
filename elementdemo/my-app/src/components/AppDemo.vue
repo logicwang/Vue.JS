@@ -22,7 +22,7 @@
               >
             </el-form-item>
             <el-form-item style="float: right">
-              <el-button type="primary" @click="handleAdd">新增</el-button>
+              <el-button type="primary" @click="add()">新增</el-button>
             </el-form-item>
           </div>
         </el-form>
@@ -111,6 +111,7 @@
 export default {
   data() {
     return {
+      tableData: [],
       sels: [],
       listLoading: false,
       lists: JSON.parse(sessionStorage.getItem("lists"))
@@ -184,9 +185,13 @@ export default {
         this.lists.splice(index, 0, downData);
       }
     },
-        handleAdd() {
-      console.log("打印tabledata", this.tableData);
+  add() {
       this.tableData.push(this.form);
+      console.log("打印tabledata", this.tableData);
+      // 新增数据
+      this.dialogFormVisible = false;
+      console.log("打印dialogFormVisible", this.dialogFormVisible);
+      // 新增数据后关闭弹窗
     },
   },
 };

@@ -2,37 +2,37 @@
   <div id="app">
     <!-- <hr />
     <DemoApp />
-    <hr /> -->
+    <hr />
     <AppApp />
-    <!-- <hr />
+    <hr />
     <HelloWorld />
     <hr />
     <NameApp />
     <hr />
     <MeteApp />
-    <hr />
-    <AppDemo />
     <hr /> -->
+    <AppDemo />
+    <hr />
   </div>
 </template>
 
 <script>
-import AppApp from "./components/AppApp.vue";
-// import DemoApp from "./components/DemoApp.vue";
-// import HelloWorld from "./components/HelloWorld.vue";
-// import NameApp from "./components/NameApp.vue";
-// import MeteApp from "./components/MeteApp.vue";
-// import AppDemo from "./components/AppDemo.vue";
+// import AppApp from "./components/AppApp.vue";
+// // import DemoApp from "./components/DemoApp.vue";
+// // import HelloWorld from "./components/HelloWorld.vue";
+// // import NameApp from "./components/NameApp.vue";
+// // import MeteApp from "./components/MeteApp.vue";
+import AppDemo from "./components/AppDemo.vue";
 
 export default {
   name: "app",
   components: {
-    AppApp,
+    // AppApp,
     // DemoApp,
     // HelloWorld,
     // NameApp,
     // MeteApp,
-    // AppDemo,
+    AppDemo,
   },
 };
 </script>
