@@ -11,8 +11,9 @@
     <hr />
     <MeteApp />
     <hr /> -->
-    <AppDemo />
-    <hr />
+    <!-- <AppDemo />
+    <hr /> -->
+    <LineApp/>
   </div>
 </template>
 
@@ -22,7 +23,8 @@
 // // import HelloWorld from "./components/HelloWorld.vue";
 // // import NameApp from "./components/NameApp.vue";
 // // import MeteApp from "./components/MeteApp.vue";
-import AppDemo from "./components/AppDemo.vue";
+// import AppDemo from "./components/AppDemo.vue";
+import LineApp from "./components/LineApp.vue";
 
 export default {
   name: "app",
@@ -32,7 +34,8 @@ export default {
     // HelloWorld,
     // NameApp,
     // MeteApp,
-    AppDemo,
+    // AppDemo,
+    LineApp
   },
 };
 </script>
