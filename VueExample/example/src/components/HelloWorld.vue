@@ -47,7 +47,6 @@
         <!-- 可以用第三个参数作为索引 -->
       </div>
     </div>
-    <li v-for="n in evenNumbers" :key="n">{{ n }}</li>
   </div>
 </template>
 
@@ -79,11 +78,7 @@ export default {
     reversedMessage() {
       return this.message.split("").reverse().join("");
     },
-    evenNumbers: function () {
-      return this.numbers.filter(function (number) {
-        return number % 2 === 0;
-      });
-    },
+
   },
 };
 </script>
