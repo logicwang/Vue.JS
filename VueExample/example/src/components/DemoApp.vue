@@ -45,7 +45,9 @@
         </el-checkbox-group>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="deviceOnSubmit()">立即创建</el-button>
+        <el-button type="primary" @click="deviceOnSubmit()" 
+          >立即创建</el-button
+        >
       </el-form-item>
     </el-form>
   </div>
@@ -67,20 +69,17 @@ export default {
         phone: "",
         hobby: [],
       },
-        deviceFormVisible: false,
-        deviveInfo: {},
+      deviceFormVisible: false,
+      deviveInfo: {},
       // 表单规则
       simpleRules: {
         name: [
           { required: true, message: "请输入您的姓名", trigger: "blur" },
-          {
-            min: 3,
-            max: 10,
-            message: "长度在 3 到 10 个字符",
-            trigger: "blur",
-          },
+          { min: 3,max: 10,message: "长度在 3 到 10 个字符",trigger: "blur",},
         ],
-        sex: [{ required: true, message: "请选择您的性别", trigger: "change" }],
+        sex: [
+          { required: true, message: "请选择您的性别", trigger: "change" }
+        ],
         age: [
           { required: true, message: "请选择您的年龄", trigger: "blur" },
           { type: "number", message: "年龄必须为数值类型", trigger: "blur" },
@@ -93,27 +92,15 @@ export default {
           { min: 11, max: 11, message: "请输入11位手机号", trigger: "blur" },
         ],
         hobby: [
-          {
-            required: true,
-            message: "至少选择一个爱好",
-            trigger: "blur",
-          },
+          { required: true, message: "至少选择一个爱好", trigger: "blur" },
         ],
       },
     };
   },
   methods: {
     // 保存设备
-    deviceOnSubmit(data) {
-      const list = [...this.deviceList];
-      const key = this.deviveInfo.key;
-      if (key || key > -1) {
-        list[key] = { ...data };
-      } else {
-        list.push({ ...data });
-      }
+    deviceOnSubmit() {
       this.updateState({
-        deviceList: list,
         deviceFormVisible: false,
         deviveInfo: {},
       });

@@ -2,24 +2,27 @@
   <div id="app">
     <div>
       <!-- <HelloWorld /> -->
-      <DemoApp />
+      <!-- <DemoApp /> -->
       <!-- <hr/> -->
       <!-- <CheckOut/> -->
+      <CheckApp/>
     </div>
   </div>
 </template>
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
-import DemoApp from "./components/DemoApp.vue";
+// import DemoApp from "./components/DemoApp.vue";
 // import CheckOut from "./components/CheckOut.vue";
+import CheckApp from "./components/CheckApp.vue";
 
 export default {
   name: "app",
   components: {
     // HelloWorld,
-    DemoApp,
+    // DemoApp,
     // CheckOut,
+    CheckApp
   },
 };
 </script>
