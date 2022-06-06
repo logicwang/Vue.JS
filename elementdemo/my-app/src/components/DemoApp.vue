@@ -123,17 +123,17 @@ export default {
         cancelButtonText: "取消",
         type: "warning",
       })
-        .then(() => {
-          this.tableData.splice(index, 1);
-          console.log("---tableData--", this.tableData);
-          this.ListLoadData; //重新加载 数据
-          this.$message({ type: "success", message: "删除成功" });
-        })
-        .catch((err) => {
-          if (err != "cancel") {
-            this.$message({ type: "error", message: "删除失败 " + err });
-          }
-        });
+      .then(() => {
+        this.tableData.splice(index, 1);
+        console.log("---tableData--", this.tableData);
+        this.ListLoadData; //重新加载 数据
+        this.$message({ type: "success", message: "删除成功" });
+      })
+      .catch((err) => {
+        if (err != "cancel") {
+          this.$message({ type: "error", message: "删除失败 " + err });
+        }
+      });
     },
   },
 };
