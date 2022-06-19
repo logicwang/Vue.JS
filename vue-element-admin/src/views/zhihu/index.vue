@@ -1,85 +1,88 @@
 <template>
-  <div id="container">
-    <!--图表容器-->
-    <div id="newCharts"></div>
-  </div>
+  <el-main>
+    <div class="container_box">
+      <el-card class="header">
+        <el-form
+          ref="tableData"
+          :model="searchForm"
+          label-width="90px"
+          resetFields
+        >
+          <el-row>
+            <el-col :span="6">
+              <el-form-item label="合同名称">
+                <el-input
+                  v-model.trim="searchForm.targetCompanyName"
+                  placeholder="请输入合同名称"
+                ></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label-width="20px">
+                <el-button
+                  type="primary"
+                  size="small"
+                  icon="el-icon-search"
+                  @click="getList()"
+                  >查询</el-button
+                >
+                <el-button
+                  type="primary"
+                  size="small"
+                  icon="el-icon-refresh"
+                  @click="handleReset()"
+                  >重置</el-button
+                >
+                <!-- 新增数据弹框 -->
+                <el-button type="primary" @click="dialogFormVisible = true"
+                  >内容</el-button
+                >
+              </el-form-item>
+            </el-col>
+          </el-row>
+        </el-form>
+      </el-card>
+    </div>
+  </el-main>
 </template>
-<style lang="scss" scoped>
-  #container {
-    width: 100%;
-    height: 100vh;
-    padding-top: 100px;
-    #newCharts{
-      margin: 0 auto;
-      width: 800px;
-      height: 800px;
-    }
-  }
-</style>
+
 <script>
-  export default {
-    name: "example",
-    data() {
-      return {
-			formatter:'￥{value}',
-		}
-    },
-    mounted() {
-      this.showCharts();
-    },
-    methods: {
-      // 展示折线图
-      showCharts(){
-        // 基于准备好的dom，初始化echarts实例
-        let myChart = this.$echarts.init(document.getElementById('newCharts'));//也可以通过$refs.newCharts的方式去获取到dom实例。
-        // 绘制图表
-        myChart.setOption({
-          title: { text: '在vue中使用echarts绘制图表' },//图标的标题
-          // X轴
-          xAxis: {
-            type: 'category',//坐标轴类型,类目轴，适用于离散的类目数据。为该类型时类目数据可自动从 series.data 或 dataset.source 中取，或者可通过 xAxis.data 设置类目数据
-            //坐标轴刻度相关设置
-            axisTick: {
-              alignWithLabel: true,//为true时，可以让刻度跟底部的标签内容对齐
-            },
-            data: ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'],//X轴的刻度数据
-            name: "时间",//坐标轴名称
-            nameLocation: "start",//坐标轴名称显示位置
-            //坐标轴名称的文字样式
-            nameTextStyle: {
-              align: "center",//文字水平对齐方式，默认自动
-              verticalAlign: "top",//文字垂直对齐方式，默认自动
-              lineHeight: 28,//行高
-              fontSize: 10,//字体大小
-              color: "rgba(0, 0, 0, 1)"//字体颜色
-            },
-            //坐标轴刻度标签的相关设置
-            axisLabel: {
-              interval: 'auto'//坐标轴刻度标签的显示间隔，在类目轴中有效。可以设置成 0 强制显示所有标签,如果设置为 1，表示『隔一个标签显示一个标签』，如果值为 2，表示『隔两个标签显示一个标签』，以此类推。
-            }
-          },
-          // Y轴
-          yAxis: {
-            type: 'value',//坐标轴类型,'value' 数值轴，适用于连续数据
-            //坐标轴刻度标签的相关设置
-            axisLabel: {
-              formatter: this.formatter//刻度标签的内容格式器，支持字符串模板和回调函数两种形式。简单讲就是可以自己格式化标签的内容。
-            },
-          },
-          //直角坐标系内绘图网格,简单理解指的就是这个折线图。
-          grid: {
-            left: 50//grid 组件离容器左侧的距离
-          },
-          // 数据
-          series: [
-            {
-              data: [155,45,87,123,89,116,173],//折线图要展示的数据
-              type: 'line'//数据以什么样的类型展示。line为折线图
-            }
-          ]
-        })
-      }
-    }
-  }
+export default {
+  data() {
+    return {
+      searchForm: {},
+    };
+  },
+};
 </script>
-    
+
+<style>
+.el-form-item {
+  margin-bottom: 0px;
+}
+.el-button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 1px solid #DCDFE6;
+    border-color: #DCDFE6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    font-weight: 400;
+    /* -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; */
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+</style>
